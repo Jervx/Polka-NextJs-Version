@@ -25,8 +25,7 @@ export default function Home() {
         body: JSON.stringify({ mode: 3 }),
       });
 
-      if (!response.ok)
-        throw new Error("Can't Retrieve Quizes", { cause: response });
+      if (!response.ok) throw new Error("Can't Retrieve Quizes", { cause: response });
 
       const data = await response.json();
 
