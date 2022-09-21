@@ -16,7 +16,7 @@ export default function Home() {
   const loadQuizes = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:3000/api/quiz", {
+      const response = await fetch("/api/quiz", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

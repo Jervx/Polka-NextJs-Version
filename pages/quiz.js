@@ -27,7 +27,7 @@ export default function Quiz() {
     if (qid.length === 0) return;
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:3000/api/quiz", {
+      const response = await fetch("/api/quiz", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
