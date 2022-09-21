@@ -10,7 +10,6 @@ import { dateToBeutify } from "../helpers";
 
 export default function Home() {
   const router = useRouter();
-
   const [quizes, setQuizes] = useState([]);
   const [loading, setLoading] = useState(false);
 

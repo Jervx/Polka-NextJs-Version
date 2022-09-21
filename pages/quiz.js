@@ -6,9 +6,8 @@ import Layout from "../layout";
 import QuizContainer from "../components/quiz/QuizContainer";
 import Loading from "../components/loading";
 
-export default function quiz() {
+export default function Quiz() {
   const router = useRouter();
-
   const [qid, setQid] = useState("");
   const [score, setScore] = useState(0);
   const [quizTitle, setQuizTitle] = useState("");
@@ -91,6 +90,6 @@ export default function quiz() {
   );
 }
 
-quiz.getLayout = function getLayout(page) {
+Quiz.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
 };
