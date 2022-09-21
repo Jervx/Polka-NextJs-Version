@@ -29,6 +29,7 @@ export default function Quiz() {
       setLoading(true);
       const response = await fetch("/api/quiz", {
         method: "POST",
+        mode : 'no-cors',
         headers: {
           "Content-Type": "application/json",
         },
