@@ -27,7 +27,7 @@ export default function Quiz() {
     if (qid.length === 0) return;
     try {
       setLoading(true);
-      const response = await fetch("api/quiz", {
+      const response = await fetch("https://polka-next-js-version-6vlo8g5x2-jervx.vercel.app/api/quiz", {
         method: "POST",
         mode : 'no-cors',
         headers: {
