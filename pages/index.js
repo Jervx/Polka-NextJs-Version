@@ -16,7 +16,7 @@ export default function Home() {
   const loadQuizes = async () => {
     try {
       setLoading(true);
-      const response = await fetch("/api/quiz", {
+      const response = await fetch("api/quiz", {
         method: "POST",
         mode : 'no-cors',
         headers: {
