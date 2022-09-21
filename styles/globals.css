@@ -1,4 +1,15 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100;300;400;500;600;700;900&family=Lato:ital,wght@0,400;0,900;1,300&display=swap');
+
+html{
+    @apply bg-base-100 duration-200 ease-in-out;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -6,21 +17,22 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+::-webkit-scrollbar{
+    @apply bg-base-100/50 w-3;
 }
 
-* {
-  box-sizing: border-box;
+::-webkit-scrollbar-thumb{
+    @apply bg-base-300 rounded-2xl;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.font-inter{
+    font-family: 'Inter', sans-serif;
+}
+
+.font-lato{
+    font-family: 'Lato', sans-serif;
+}
+
+.font-andika{
+    font-family: 'Andika', sans-serif;
 }
