@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { genArray } from "../helpers";
 
 import Layout from "../layout";
 import QuizContainer from "../components/quiz/QuizContainer";
@@ -29,14 +30,15 @@ export default function Quiz() {
       setLoading(true);
       const response = await fetch("/api/quiz", {
         method: "POST",
-        mode : 'no-cors',
+        mode : 'cors',
         headers: {
-          "Content-Type": "application/json",
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-          mode: 0,
-          quiz_id: qid,
-        }),
+        body: JSON.stringify( {
+            mode: 0,
+            quiz_id: qid,
+          }),
       });
 
       if(!response.ok) throw new Error("Can't Retrieve Quiz", {cause: response});
@@ -44,7 +46,13 @@ export default function Quiz() {
       const data = await response.json();
 
       setQuizTitle(data.quizName);
-      setQuestions(data.questions);
+
+      // Shuffle
+      let genQuestions = genArray(data.questions.length)
+
+      for( var x = 0; x < genQuestions.length; x++) genQuestions[x] = data.questions[genQuestions[x]]
+
+      setQuestions(genQuestions);
     } catch (e) {
       console.log(e);
     }
@@ -63,7 +71,7 @@ export default function Quiz() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex justify-center mt-20 md:mt-24">
+      <main className="flex justify-center min-h-screen mt-20 md:mt-24">
         <Loading loading={loading} />
 
         {questions.length > 0 && !loading && (

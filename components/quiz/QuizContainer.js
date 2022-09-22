@@ -1,5 +1,5 @@
 import { BsFillJournalBookmarkFill } from "react-icons/bs";
-import { AiFillLike } from "react-icons/ai"
+import { AiFillLike } from "react-icons/ai";
 import { useState } from "react";
 import { checkMyAnswer } from "../../helpers";
 const QuizContainer = ({
@@ -21,7 +21,9 @@ const QuizContainer = ({
     if (checked)
       if (checkMyAnswer(question.choices[idx], question.answers)) {
         return "ring-success from-base-100 to-accent";
-      } else return "ring-error from-base-100 to-error opacity-50";
+      } else {
+        return "ring-error from-base-100 to-error opacity-50";
+      }
 
     if (chosen === idx) return "ring-accent from-base-100 to-primary";
 
@@ -79,7 +81,15 @@ const QuizContainer = ({
                       )} ring-2 p-4 mb-6 rounded-xl`}
                     >
                       <span className="font-lato tracking-wider text-lg md:text-xl font-bold flex">
-                        {choice} {checkMyAnswer(chosen > -1 ? question.choices[idx] : "", question.answers) && checked ? <AiFillLike className="ml-3 text-success text-2xl"/> : <></>}
+                        {choice}{" "}
+                        {checkMyAnswer(
+                          chosen > -1 ? question.choices[idx] : "",
+                          question.answers
+                        ) && checked ? (
+                          <AiFillLike className="ml-3 text-success text-2xl" />
+                        ) : (
+                          <></>
+                        )}
                       </span>
                       <input
                         type="checkbox"
@@ -102,8 +112,12 @@ const QuizContainer = ({
         <button
           disabled={chosen === -1 || checked}
           onClick={() => {
-            if (checkMyAnswer(question.choices[chosen], question.answers))
+            var soundCorrect = new Audio("/sounds/correct.mp3");
+            var soundWrong = new Audio("/sounds/wrong.mp3");
+            if (checkMyAnswer(question.choices[chosen], question.answers)) {
+              soundCorrect.play();
               onCorrect(true);
+            }else soundWrong.play();
             setChecked(true);
           }}
           className="btn btn-active mr-2"
@@ -115,6 +129,8 @@ const QuizContainer = ({
             if (pntr + 1 === total) {
               onFinish();
               setFinished(true);
+              var soundFinish = new Audio("/sounds/finish.mp3");
+              soundFinish.play();
               return;
             }
             onNext(pntr + 1);
@@ -129,10 +145,10 @@ const QuizContainer = ({
         {finished && (
           <button
             onClick={() => {
-                setChecked(false);
-                setChosen(-1);
-                setFinished(false);
-                tryAgain();
+              setChecked(false);
+              setChosen(-1);
+              setFinished(false);
+              tryAgain();
             }}
             className="ml-2 btn btn-active"
           >

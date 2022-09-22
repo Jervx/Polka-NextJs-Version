@@ -1,0 +1,277 @@
+{
+    "mode": 0,
+    "quiz_id": "632b0d49ec45f04d9b7e44ce",
+    "quizContent": {
+        "Subject": "ITEL 316 - Prelim Reviewer",
+        "quizName": "ITEL 316 - Prelim Reviewer",
+        "questions": [
+            {
+                "type": 0,
+                "question": "API level of android 6.0",
+                "answers": ["23"],
+                "choices": ["20","21","22","23"]
+            },
+            {
+                "type": 0,
+                "question": "API level of android 5.1",
+                "answers": ["22"],
+                "choices": ["20","21","22","23"]
+            },
+            {
+                "type": 0,
+                "question": "API level of android 5.0",
+                "answers": ["21"],
+                "choices": ["20","21","22","23"]
+            },
+            {
+                "type": 0,
+                "question": "API level of android 4.4W",
+                "answers": ["20"],
+                "choices": ["20","21","22","23"]
+            },
+            {
+                "type": 0,
+                "question": "API level of android 4.4",
+                "answers": ["19"],
+                "choices": ["16","17","18","19"]
+            },{
+                "type": 0,
+                "question": "API level of android 4.3",
+                "answers": ["18"],
+                "choices": ["16","17","18","19"]
+            },{
+                "type": 0,
+                "question": "API level of android 4.2 to 4.2.2",
+                "answers": ["17"],
+                "choices": ["16","17","18","19"]
+            },{
+                "type": 0,
+                "question": "API level of android 4.1 to 4.1.1",
+                "answers": ["16"],
+                "choices": ["16","17","18","19"]
+            },{
+                "type": 0,
+                "question": "API level of android 4.0.3 to 4.0.4",
+                "answers": ["15"],
+                "choices": ["13","14","15","16"]
+            },{
+                "type": 0,
+                "question": "API level of android 4.0 to 4.0.2",
+                "answers": ["14"],
+                "choices": ["13","14","15","16"]
+            },{
+                "type": 0,
+                "question": "API level of android 3.2",
+                "answers": ["13"],
+                "choices": ["11","12","13","14"]
+            },{
+                "type": 0,
+                "question": "API level of android 3.1.x",
+                "answers": ["12"],
+                "choices": ["10","11","12","13"]
+            },{
+                "type": 0,
+                "question": "API level of android 3.0.x",
+                "answers": ["11"],
+                "choices": ["10","11","12","13"]
+            },{
+                "type": 0,
+                "question": "API level of android 2.3.3 to 2.3.4",
+                "answers": ["10"],
+                "choices": ["10","11","12","13"]
+            },{
+                "type": 0,
+                "question": "API level of android 2.3 to 2.3.2",
+                "answers": ["9"],
+                "choices": ["6","7","8","9"]
+            },{
+                "type": 0,
+                "question": "API level of android 2.2.x",
+                "answers": ["8"],
+                "choices": ["5","6","7","8"]
+            },
+            {
+                "type": 0,
+                "question": "API level of android 2.1.x",
+                "answers": ["7"],
+                "choices": ["5","6","7","8"]
+            },
+            {
+                "type": 0,
+                "question": "API level of android 2.0.1",
+                "answers": ["6"],
+                "choices": ["5","6","7","8"]
+            },
+            {
+                "type": 0,
+                "question": "API level of android 2.0",
+                "answers": ["5"],
+                "choices": ["5","6","7","8"]
+            },
+            {
+                "type": 0,
+                "question": "API level of android 1.6",
+                "answers": ["4"],
+                "choices": ["1","2","3","4"]
+            },
+            {
+                "type": 0,
+                "question": "API level of android 1.5",
+                "answers": ["3"],
+                "choices": ["1","2","3","4"]
+            },
+            {
+                "type": 0,
+                "question": "API level of android 1.1",
+                "answers": ["2"],
+                "choices": ["1","2","3","4"]
+            },
+            {
+                "type": 0,
+                "question": "API level of android 1.0",
+                "answers": ["1"],
+                "choices": ["1","2","3","4"]
+            },
+            {
+                "type": 0,
+                "question": "It is an integer value that uniquely identifies the framework API version offered by an android version.",
+                "answers": ["API Level"],
+                "choices": ["Integer level", "Open Source Level", "Access Level", "API Level"]
+            },
+            {
+                "type": 0,
+                "question": "Android 1.0 was released in ____ 2008",
+                "answers": ["September"],
+                "choices": ["August", "September", "November", "December"]
+            },
+            {
+                "type": 0,
+                "question": "What year the 1st android SDK was released?",
+                "answers": ["2007"],
+                "choices": ["2006", "2007", "2008", "2009"]
+            },
+            {
+                "type": 0,
+                "question": "Android was developed by ______ led by Google, and other companies",
+                "answers": [],
+                "choices": ["Microsoft", "Open Source Community", "Linus", "Open Handset Alliance"]
+            },
+            {
+                "type": 0,
+                "question": "Android is an _____ operating system",
+                "answers": ["Linux-based"],
+                "choices": ["MacOs-based", "Windows-based", "Linux-based"]
+            },
+            {
+                "type": 0,
+                "question": "It is a general abstraction for something that can be drawn",
+                "answers": ["Drawable"],
+                "choices": ["Video", "Image", "Drawable", "Animation"]
+            },
+            {
+                "type": 0,
+                "question": "You can use the _____ class and its subclasses to draw shapes and images.",
+                "answers": ["Drawable"],
+                "choices": ["Java","Drawable", "Animation"]
+            },
+            {
+                "type": 0,
+                "question": "Most of Android UI is defined in ____ files",
+                "answers": ["XML"],
+                "choices": ["Java Class", "XML"]
+            },
+            {
+                "type": 0,
+                "question": "The user interface of an Android application is built using _____.",
+                "answers": ["Views"],
+                "choices": ["Intent","XML","Activity","Views"]
+            },
+            {
+                "type": 0,
+                "question": "Intent sendIntent = new Intent(getApplicationContext(), ActivityTwo.class); startActivity(______);",
+                "answers": ["sendIntent"],
+                "choices": ["new Intent","this.Intent","sendIntent","ActivityTwo.class"]
+            },
+            {
+                "type": 0,
+                "question": "Android system initiates code in an Activity instance by invoking specific callback methods",
+                "answers": ["True"],
+                "choices": ["True", "False"]
+            },
+            {
+                "type": 0,
+                "question": "In android, app/program are launched with a main() method",
+                "answers": ["False"],
+                "choices": ["True", "False"]
+            },{
+                "type": 0,
+                "question": "It is a crucial component of an Android app",
+                "answers": ["Activity class", "Activity"],
+                "choices": ["Activity class", "Intent", "XML", "Java"]
+            },{
+                "type": 0,
+                "question": "Each application window is called an activity and they can be called using ____",
+                "answers": ["Intent", "Intents"],
+                "choices": ["Intent", "Activity", "TextView", "EmptyActivity"]
+            },{
+                "type": 0,
+                "question": "Android, we can only put one application in focus at a time",
+                "answers": ["True"],
+                "choices": ["True", "False"]
+            },
+            {
+                "type": 0,
+                "question": "Android OS had only been used since ____",
+                "answers": [
+                    "2003"
+                ],
+                "choices": [
+                    "2008",
+                    "2003",
+                    "2005",
+                    "2006"
+                ]
+            },
+            {
+                "type": 0,
+                "question": "Who owns android?",
+                "answers": [
+                    "Google"
+                ],
+                "choices": [
+                    "Google",
+                    "Microsoft",
+                    "Amazon",
+                    "Apple"
+                ]
+            },
+            {
+                "type": 0,
+                "question": "What component is used to display text?",
+                "answers": [
+                    "TextView"
+                ],
+                "choices": [
+                    "Intent",
+                    "ImageView",
+                    "Button",
+                    "TextView"
+                ]
+            },
+            {
+                "type": 0,
+                "question": "What programming language is used in android?",
+                "answers": [
+                    "Java"
+                ],
+                "choices": [
+                    "Cobol",
+                    "C",
+                    "Java",
+                    "Rust"
+                ]
+            }
+        ],
+        "answeredBy": []
+    }
+}

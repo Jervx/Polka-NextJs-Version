@@ -7,7 +7,8 @@ let ObjectId = require("mongoose").Types.ObjectId;
 mongoConnect();
 
 export default async function handler(req, res) {
-  const { mode, quiz_id, quiz_name, quizContent } = JSON.parse(req.body);
+  
+  const { mode, quiz_id, quiz_name, quizContent } = req.body;
 
 
   try {
