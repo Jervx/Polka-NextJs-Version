@@ -105,7 +105,7 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="mt-2 md:mt-0 flex items-center md:justify-end opacity-60">
-                        <p className="text-sm font-bold ">Multiple Choice</p>
+                        <p className="text-sm font-bold ">{q.quizType === 0 ? "multiple choice" : ""} {q.quizType === 1 ? "Identification" : ""} {q.quizType === 3 ? "Mixed" : ""}</p>
                         <RiCheckboxMultipleFill className="ml-2 text-sm" />
                       </div>
                     </div>
