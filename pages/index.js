@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import { BsFillJournalBookmarkFill } from "react-icons/bs";
+import { RiCheckboxMultipleFill } from "react-icons/ri"
+import { BiGridVertical } from "react-icons/bi"
+import { MdPublic } from "react-icons/md"
+import { FaPenNib } from "react-icons/fa"
 
 import Layout from "../layout";
 import Loading from "../components/loading";
@@ -18,14 +22,15 @@ export default function Home() {
       setLoading(true);
       const response = await fetch("/api/quiz", {
         method: "POST",
-        mode : 'cors',
+        mode: "cors",
         headers: {
-            'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ mode: 3 }),
       });
 
-      if (!response.ok) throw new Error("Can't Retrieve Quizes", { cause: response });
+      if (!response.ok)
+        throw new Error("Can't Retrieve Quizes", { cause: response });
 
       const data = await response.json();
 
@@ -48,22 +53,67 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="min-h-screen mx-24 mt-12 font-andika text-2xl md:mt-24">
-        <p className=""></p>
+      <main onClick={()=>{}} className="min-h-screen m-5 font-andika text-2xl mt-20 sm:mt-24 flex gap-2 relative">
+        <div className="hidden md:block min-h-screen w-1/12 md:w-2/12">
+            <div className="flex text-sm md:gap-2 items-center py-4 md:p-4 hover:bg-base-200 cursor-pointer">
+                <MdPublic className="text-accent "/>
+                <p className="hidden md:block">Shared</p>
+            </div>
+            <div className="flex text-sm md:gap-2 items-center py-4 md:p-4 hover:bg-base-200 cursor-pointer">
+                <FaPenNib className="text-accent"/>
+                <p className="hidden md:block">Created By You</p>
+            </div>
+        </div>
 
-        <div className="flex flex-wrap mt-4">
+        <div className=" h-screen w-full md:w-7/12">
           <div className="flex w-full justify-center">
             <Loading loading={loading} />
           </div>
-          {!loading &&
-            quizes.map((q, idx) => (
-              <div key={idx} className="p-2 w-1/3 ">
-                <div onClick={()=>router.push(`/quiz?_qid=${q._id}`)} className="card p-4 bg-neutral hover:cursor-pointer duration-150 ease-in ring ring-base-100 hover:ring-accent">
-                  <p className="text-lg flex items-center"><BsFillJournalBookmarkFill className="mr-2"/>{q.quizName}</p>
-                  <p className="mt-4 text-xs">{dateToBeutify(q.cat)}</p>
+          <div className="flex justify-center mt-4">
+            <BsFillJournalBookmarkFill className="text-2xl text-primary" />
+          </div>
+          <p className="text-center mt-4">Reviewers</p>
+          <p className="text-center justify-center text-sm opacity-75 mt-4">
+            These are reviewers/questions that are created by different students
+            <br /> with the aim for their exams.
+          </p>
+
+          <div className="mt-16">
+            {!loading &&
+              quizes.map((q, idx) => (
+                <div key={idx} className="p-0 md:p-2 mx-1 md:mx-4">
+                  <div
+                    onClick={() => router.push(`/quiz?_qid=${q._id}`)}
+                    className="rounded-md outline outline-1 outline-base-300/70 p-4 hover:cursor-pointer duration-150 ease-in shadow-sm hover:shadow-lg hover:scale-105 "
+                  >
+                    <div className="md:flex justify-between items-center">
+                      <div className="flex justify-start items-center gap-2">
+                        <BiGridVertical className="text-sm"/>
+                        <p className="text-sm"><span className="font-bold opacity-50">Creator</span> : Anya</p>
+                        <div
+                          className="avatar "
+                        >
+                          <div className="w-5 rounded-full">
+                            <img src="https://img1.ak.crunchyroll.com/i/spire2/f502d225e63d2dcf6ea9810c37048f971651090640_large.jpg" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="mt-2 md:mt-0 flex items-center md:justify-end opacity-60">
+                        <p className="text-sm font-bold ">Multiple Choice</p>
+                        <RiCheckboxMultipleFill className="ml-2 text-sm"/>
+                      </div>
+                    </div>
+                    <div className="mt-6">
+                        <p className="text-xl font-lato font-semibold">{q.quizName}</p>
+                    </div>
+                    <div className="mt-6 md:flex justify-between">
+                        <p className="mt-4 text-xs opacity-50">{dateToBeutify(q.cat)}</p>
+                        <p className="mt-3 text-xs opacity-50">Accessed by students {q.accessCount}x </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+          </div>
         </div>
       </main>
     </>

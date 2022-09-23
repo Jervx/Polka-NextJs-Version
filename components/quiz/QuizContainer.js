@@ -31,7 +31,7 @@ const QuizContainer = ({
   };
 
   return (
-    <div className="w-full sm:w-full md:w-9/12 lg:w-7/12 card rounded-lg py-12 px-8 md:px-24">
+    <div className="w-full sm:w-full md:w-9/12 lg:w-7/12 card rounded-lg  px-8 md:px-24">
       {finished && (
         <>
           <div className="flex justify-center">
@@ -51,14 +51,14 @@ const QuizContainer = ({
       {!finished && (
         <>
           <div className="sm:flex items-center justify-between">
-            <div className="items-center flex font-andika tracking-wide">
-              <BsFillJournalBookmarkFill className=" mr-4" />
+            <div className="items-center flex font-andika font-bold tracking-wide text-xs md:text-xl">
+              <BsFillJournalBookmarkFill className=" mr-2 text-lg" />
               <p className="">{title}</p>
             </div>
             <div className="mt-4 sm:mt-0 flex items-center text-purple-700">
-              <p className="mr-3 text-xl font-lato font-bold">
+              <p className="mr-3 text-sm md:text-lg font-lato font-bold">
                 {" "}
-                Question {pntr + 1} <span className="text-sm">/ {total}</span>{" "}
+                Question {pntr + 1} <span className="">/ {total}</span>{" "}
               </p>
               <progress
                 className="progress progress-primary w-24"
@@ -67,7 +67,7 @@ const QuizContainer = ({
               />
             </div>
           </div>
-          <div className="h-full my-8">
+          <div className="my-4">
             <p className="mt-4 font-lato font-bold text-xl md:text-2xl">
               {question.question}
             </p>
@@ -78,7 +78,7 @@ const QuizContainer = ({
                     <label
                       className={`cursor-pointer label duration-500 ease-in-out flex justify-between bg-gradient-to-r ${getRing(
                         idx
-                      )} ring-2 p-4 mb-6 rounded-xl`}
+                      )} ring-2 p-2 px-4 mb-5 rounded-xl`}
                     >
                       <span className="font-lato tracking-wider text-lg md:text-xl font-bold flex">
                         {choice}{" "}

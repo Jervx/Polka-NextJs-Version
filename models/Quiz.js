@@ -5,7 +5,8 @@ const QuizSchema = new Schema({
   quizName : { type : String, default : ""},
   questions : { type : Array, default : [] },
   answeredBy : { type : Array, default : []},
-  cat : { type : Date, default : Date.now }
+  cat : { type : Date, default : Date.now },
+  accessCount : { type : Number, default : 0 }
 });
 
 const Quiz = models.Quiz || model('Quiz', QuizSchema);

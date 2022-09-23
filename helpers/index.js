@@ -17,7 +17,6 @@ export const randomInt = (max) => Math.floor(Math.random() * max);
 
 export const checkMyAnswer = (myAnswer, answers) => {
   for (var x = 0; x < answers.length; x++){
-    console.log(myAnswer)
     if (myAnswer.toLowerCase() === answers[x].toLowerCase()) return true;
   }
   return false;

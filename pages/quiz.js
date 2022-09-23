@@ -71,7 +71,7 @@ export default function Quiz() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex justify-center min-h-screen mt-20 md:mt-24">
+      <main className="flex justify-center mt-20 md:mt-24">
         <Loading loading={loading} />
 
         {questions.length > 0 && !loading && (

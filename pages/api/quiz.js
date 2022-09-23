@@ -16,12 +16,14 @@ export default async function handler(req, res) {
       if (quiz_id) {
         const quiz = await Quizes.findOne({ _id: new ObjectId(quiz_id) });
         if (!quiz) return res.status(404).json({ message: "Quiz Not Found" });
+        const updateViewCount = await Quizes.updateOne({ _id: new ObjectId(quiz_id) },{$inc : { accessCount : 1} });
         return res.status(200).json(quiz);
       }
 
       if (quiz_name) {
         const quiz = await Quizes.findOne({ quizName: quiz_name });
         if (!quiz) return res.status(404).json({ message: "Quiz Not Found" });
+        const updateViewCount = await Quizes.updateOne({ _id: new ObjectId(quiz_id) },{$inc : { accessCount : 1} });
         return res.status(200).json(quiz);
       }
     }
@@ -52,5 +54,5 @@ export default async function handler(req, res) {
     });
   }
 
-  return res.status(404).json({message : "not found"});
+  return res.status(400).json({message : "STOP! You don't know what you're doing, don't ya 😏?"});
 }
