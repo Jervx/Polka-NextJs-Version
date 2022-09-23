@@ -25,6 +25,15 @@ export default function Quiz() {
     setQid(_qid);
   }, [router]);
 
+  const shuffle = () => {
+    let genQuestions = genArray(questions.length);
+
+      for (var x = 0; x < genQuestions.length; x++)
+        genQuestions[x] = questions[genQuestions[x]];
+
+      setQuestions(genQuestions);
+  }
+
   const loadQuiz = async () => {
     if (qid.length === 0) return;
     try {
@@ -81,6 +90,7 @@ export default function Quiz() {
           <QuizContainer
             myScore={score}
             tryAgain={() => {
+              shuffle();
               setScore(0);
               setPntr(0);
               setFinished(false)
