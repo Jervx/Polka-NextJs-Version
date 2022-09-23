@@ -55,7 +55,7 @@ export default function Home() {
 
       <main
         onClick={() => {}}
-        className="m-5 font-andika text-2xl mt-20 sm:mt-24 flex gap-2 relative"
+        className="m-5 font-andika text-2xl mt-20 sm:mt-24 flex gap-2 relative min-h-screen"
       >
         <div className="fixed h-screen  hidden md:block w-1/12 md:w-2/12">
           <div className="flex text-sm md:gap-2 items-center py-4 md:p-4 bg-base-200 hover:bg-base-200 cursor-pointer">

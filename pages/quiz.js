@@ -16,6 +16,7 @@ export default function Quiz() {
   const [loading, setLoading] = useState(false);
 
   const [pntr, setPntr] = useState(0);
+  const [finished, setFinished] = useState(false)
 
   useEffect(() => {
     const { _qid } = router.query;
@@ -30,27 +31,29 @@ export default function Quiz() {
       setLoading(true);
       const response = await fetch("/api/quiz", {
         method: "POST",
-        mode : 'cors',
+        mode: "cors",
         headers: {
-            'Accept': 'application/json, text/plain, */*',
-            'Content-Type': 'application/json'
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify( {
-            mode: 0,
-            quiz_id: qid,
-          }),
+        body: JSON.stringify({
+          mode: 0,
+          quiz_id: qid,
+        }),
       });
 
-      if(!response.ok) throw new Error("Can't Retrieve Quiz", {cause: response});
+      if (!response.ok)
+        throw new Error("Can't Retrieve Quiz", { cause: response });
 
       const data = await response.json();
 
       setQuizTitle(data.quizName);
 
       // Shuffle
-      let genQuestions = genArray(data.questions.length)
+      let genQuestions = genArray(data.questions.length);
 
-      for( var x = 0; x < genQuestions.length; x++) genQuestions[x] = data.questions[genQuestions[x]]
+      for (var x = 0; x < genQuestions.length; x++)
+        genQuestions[x] = data.questions[genQuestions[x]];
 
       setQuestions(genQuestions);
     } catch (e) {
@@ -71,7 +74,7 @@ export default function Quiz() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex justify-center mt-20 md:mt-24">
+      <main className="flex justify-center mt-20 md:mt-24 h-screen relative">
         <Loading loading={loading} />
 
         {questions.length > 0 && !loading && (
@@ -80,8 +83,9 @@ export default function Quiz() {
             tryAgain={() => {
               setScore(0);
               setPntr(0);
+              setFinished(false)
             }}
-            onFinish={() => {}}
+            onFinish={() => { setFinished(true) }}
             onCorrect={(val) => {
               if (val) setScore(score + 1);
             }}
@@ -93,7 +97,18 @@ export default function Quiz() {
           />
         )}
 
-        {!loading && questions.length === 0 && <p className="text-center">No Question In This Quiz</p>} 
+        {!loading && questions.length === 0 && (
+          <div>
+            <p className="text-center">No Question In This Quiz</p>
+            <img className="absolute bottom-0 left-0" src="https://c.tenor.com/qGJ0OTouREEAAAAi/anya-spy-x-family-anime.gif" />
+          </div>
+        )}
+
+        {
+            finished && 
+          <img className="absolute bottom-0 left-0" src="https://c.tenor.com/qGJ0OTouREEAAAAi/anya-spy-x-family-anime.gif" />
+
+        }
       </main>
     </>
   );

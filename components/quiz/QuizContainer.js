@@ -31,7 +31,7 @@ const QuizContainer = ({
   };
 
   return (
-    <div className="w-full sm:w-full md:w-9/12 lg:w-7/12 card rounded-lg  px-8 md:px-24">
+    <div className="w-full sm:w-full md:w-9/12 lg:w-7/12 card rounded-lg  px-8 md:px-24 relative">
       {finished && (
         <>
           <div className="flex justify-center">
@@ -108,7 +108,7 @@ const QuizContainer = ({
           </div>
         </>
       )}
-      <div className="flex items-center justify-end">
+      <div className="flex items-center justify-end mt-4">
         <button
           disabled={chosen === -1 || checked}
           onClick={() => {
