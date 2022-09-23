@@ -2,7 +2,7 @@ import ThemeSelector from "./ThemeSelector";
 import Link from "next/link";
 const Navbar = () => {
   return (
-    <nav className="navbar bg-base-100 shadow-md fixed top-0 z-10">
+    <nav className="navbar bg-base-100 shadow-md fixed top-0 z-20">
       <div className="flex-1">
         <a
           href={"/"}
