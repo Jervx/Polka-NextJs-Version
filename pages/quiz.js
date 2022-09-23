@@ -28,10 +28,18 @@ export default function Quiz() {
   const shuffle = () => {
     let genQuestions = genArray(questions.length);
 
-      for (var x = 0; x < genQuestions.length; x++)
-        genQuestions[x] = questions[genQuestions[x]];
+    for (var x = 0; x < genQuestions.length; x++){
+      var QSTN = questions[genQuestions[x]];
+      var genChoices = genArray(QSTN.choices.length)
 
-      setQuestions(genQuestions);
+      for(var y = 0; y < genChoices.length; y++)
+          genChoices[y] = QSTN.choices[genChoices[y]]
+
+      QSTN = {...QSTN, choices : genChoices}
+      genQuestions[x] = QSTN
+    }
+
+    setQuestions(genQuestions);
   }
 
   const loadQuiz = async () => {
@@ -61,8 +69,16 @@ export default function Quiz() {
       // Shuffle
       let genQuestions = genArray(data.questions.length);
 
-      for (var x = 0; x < genQuestions.length; x++)
-        genQuestions[x] = data.questions[genQuestions[x]];
+      for (var x = 0; x < genQuestions.length; x++){
+        var QSTN = data.questions[genQuestions[x]];
+        var genChoices = genArray(QSTN.choices.length)
+
+        for(var y = 0; y < genChoices.length; y++)
+            genChoices[y] = QSTN.choices[genChoices[y]]
+
+        QSTN = {...QSTN, choices : genChoices}
+        genQuestions[x] = QSTN
+      }
 
       setQuestions(genQuestions);
     } catch (e) {

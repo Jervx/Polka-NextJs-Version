@@ -77,7 +77,7 @@ const QuizContainer = ({
       {!finished && (
         <>
           <div className="sm:flex items-center justify-between">
-            <div className="mt-4 sm:mt-0 flex items-center text-purple-700">
+            <div className="mt-4 sm:mt-0 flex items-center text-accent">
               <p className="mr-3 text-sm md:text-lg font-lato font-bold">
                 {" "}
                 Question {pntr + 1} <span className="">/ {total}</span>{" "}
