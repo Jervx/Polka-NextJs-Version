@@ -155,7 +155,7 @@ const QuizContainer = ({
                     onKeyDown={(e)=>{
                         if (e.key === "Enter") {
                             e.preventDefault();
-                            verifyAnswer()
+                            if(!checked) verifyAnswer()
                         }
                     }}
                     value={answer}
