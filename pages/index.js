@@ -55,13 +55,14 @@ export default function Home() {
 
       <main onClick={()=>{}} className="min-h-screen m-5 font-andika text-2xl mt-20 sm:mt-24 flex gap-2 relative">
         <div className="hidden md:block min-h-screen w-1/12 md:w-2/12">
-            <div className="flex text-sm md:gap-2 items-center py-4 md:p-4 hover:bg-base-200 cursor-pointer">
+            <div className="flex text-sm md:gap-2 items-center py-4 md:p-4 bg-base-200 hover:bg-base-200 cursor-pointer">
                 <MdPublic className="text-accent "/>
                 <p className="hidden md:block">Shared</p>
             </div>
-            <div className="flex text-sm md:gap-2 items-center py-4 md:p-4 hover:bg-base-200 cursor-pointer">
+            <div className="flex text-sm md:gap-2 rounded-sm items-center py-4 md:p-4 hover:bg-base-200 cursor-pointer">
                 <FaPenNib className="text-accent"/>
-                <p className="hidden md:block">Created By You</p>
+                <p className="hidden md:block">Created By You </p>
+                <span className="badge">soon..</span>
             </div>
         </div>
 
