@@ -1,5 +1,6 @@
 import { BsFillJournalBookmarkFill } from "react-icons/bs";
 import { AiFillLike } from "react-icons/ai";
+import { TiArrowRightThick } from "react-icons/ti";
 import { useState } from "react";
 import { checkMyAnswer } from "../../helpers";
 const QuizContainer = ({
@@ -14,12 +15,20 @@ const QuizContainer = ({
   onFinish,
 }) => {
   const [chosen, setChosen] = useState(-1);
+  const [answer, setAnswer] = useState("");
+
   const [checked, setChecked] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
   const [finished, setFinished] = useState(false);
 
   const getRing = (idx) => {
     if (checked)
-      if (checkMyAnswer(question.choices[idx], question.answers)) {
+      if (
+        checkMyAnswer(
+          question.type === 1 ? answer : question.choices[idx],
+          question.answers
+        )
+      ) {
         return "ring-success from-base-100 to-accent";
       } else {
         return "ring-error from-base-100 to-error opacity-50";
@@ -30,20 +39,37 @@ const QuizContainer = ({
     return "ring-base-100 hover:ring-accent hover:ring-accent hover:from-base-100 hover:to-primary";
   };
 
+  const verifyAnswer = () => {
+    var soundCorrect = new Audio("/sounds/correct.mp3");
+    var soundWrong = new Audio("/sounds/wrong.mp3");
+    if (
+      checkMyAnswer(
+        question.type === 1 ? answer : question.choices[chosen],
+        question.answers
+      )
+    ) {
+      soundCorrect.play();
+      setChecked(true);
+      setIsCorrect(true);
+      onCorrect(true);
+    } else soundWrong.play();
+    setChecked(true);
+  }
+
   return (
-    <div className="w-full sm:w-full md:w-9/12 lg:w-7/12 card rounded-lg  px-8 md:px-24 relative">
+    <div className="w-full sm:w-full md:w-9/12 lg:w-7/12 rounded-lg  px-8 md:px-24 relative">
+      <div className="flex justify-center md:my-16">
+        <div className="items-center flex font-andika tracking-wide text-2xl">
+          <BsFillJournalBookmarkFill className="mr-4" />
+          <p className="text-sm">{title}</p>
+        </div>
+      </div>
       {finished && (
         <>
-          <div className="flex justify-center">
-            <div className="items-center flex font-andika tracking-wide text-2xl">
-              <BsFillJournalBookmarkFill className="mr-4" />
-              <p className="">{title}</p>
-            </div>
-          </div>
-          <p className="text-center w-full mt-16"></p>
+          <p className="text-center w-full mt-16 text-xl">You've got</p>
           <div className="flex justify-center mt-4 mb-16">
-            <p className="text-4xl ">
-              You got {myScore} / {total}
+            <p className={`text-4xl ${ myScore / total * 100 > 75 ? 'text-success' : 'text-warning' }`}>
+              {myScore} : {total}
             </p>
           </div>
         </>
@@ -51,10 +77,6 @@ const QuizContainer = ({
       {!finished && (
         <>
           <div className="sm:flex items-center justify-between">
-            <div className="items-center flex font-andika font-bold tracking-wide text-xs md:text-xl">
-              <BsFillJournalBookmarkFill className=" mr-2 text-lg" />
-              <p className="">{title}</p>
-            </div>
             <div className="mt-4 sm:mt-0 flex items-center text-purple-700">
               <p className="mr-3 text-sm md:text-lg font-lato font-bold">
                 {" "}
@@ -68,9 +90,20 @@ const QuizContainer = ({
             </div>
           </div>
           <div className="my-4">
-            <p className="mt-4 font-lato font-bold text-xl md:text-2xl">
-              {question.question}
-            </p>
+            {question.isCode ? (
+              <div className="mockup-code">
+                {question.question.split("\n").map((code, i) => (
+                  <pre data-prefix={i + 1} key={i + 1}>
+                    <code>{code}</code>
+                  </pre>
+                ))}
+              </div>
+            ) : (
+              <p className="mt-4 font-lato font-bold text-xl md:text-2xl">
+                {question.question}
+              </p>
+            )}
+
             {question.type === 0 && (
               <div className="mt-8 mx-2 md:mx-8">
                 {question.choices.map((choice, idx) => (
@@ -78,12 +111,16 @@ const QuizContainer = ({
                     <label
                       className={`cursor-pointer label duration-500 ease-in-out flex justify-between bg-gradient-to-r ${getRing(
                         idx
-                      )} ring-2 p-2 px-4 mb-5 rounded-xl`}
+                      )} ring-2 p-4 px-4 mb-5 rounded-xl`}
                     >
                       <span className="font-lato tracking-wider text-lg md:text-xl font-bold flex">
                         {choice}{" "}
                         {checkMyAnswer(
-                          chosen > -1 ? question.choices[idx] : "",
+                          question.type === 1
+                            ? answer
+                            : chosen > -1
+                            ? question.choices[idx]
+                            : "",
                           question.answers
                         ) && checked ? (
                           <AiFillLike className="ml-3 text-success text-2xl" />
@@ -105,48 +142,98 @@ const QuizContainer = ({
                 ))}
               </div>
             )}
+
+            {question.type === 1 && (
+              <>
+                <div className="form-control mt-12 w-full">
+                  <input
+                    type="text"
+                    onChange={(e) => {
+                      if (checked) return;
+                      setAnswer(e.target.value);
+                    }}
+                    onKeyDown={(e)=>{
+                        if (e.key === "Enter") {
+                            e.preventDefault();
+                            verifyAnswer()
+                        }
+                    }}
+                    value={answer}
+                    placeholder="Your answer here"
+                    className={`input input-bordered w-full ${
+                      checked && isCorrect
+                        ? "input-success ring ring-success"
+                        : !checked
+                        ? ""
+                        : "input-error ring ring-error"
+                    }`}
+                  ></input>
+                  <label className="label">
+                    <span className="label-text-alt">
+                      {checked && isCorrect && (
+                        <div className="flex items-center justify-start gap-2 text-success mt-4 text-lg">
+                          <AiFillLike className="ml-3 text-success text-2xl" />
+                          Hooray!
+                        </div>
+                      )}
+                    </span>
+                    <span className="label-text-alt">
+                      {checked && !isCorrect && (
+                        <div className="flex items-center justify-start gap-2 text-success mt-4 text-lg">
+                          <TiArrowRightThick className="ml-3 text-success text-2xl" />
+                          {question.answers[0]}
+                        </div>
+                      )}
+                    </span>
+                  </label>
+                </div>
+              </>
+            )}
           </div>
         </>
       )}
-      <div className="flex items-center justify-end mt-4">
-        <button
-          disabled={chosen === -1 || checked}
-          onClick={() => {
-            var soundCorrect = new Audio("/sounds/correct.mp3");
-            var soundWrong = new Audio("/sounds/wrong.mp3");
-            if (checkMyAnswer(question.choices[chosen], question.answers)) {
-              soundCorrect.play();
-              onCorrect(true);
-            }else soundWrong.play();
-            setChecked(true);
-          }}
-          className="btn btn-active mr-2"
-        >
-          Check Answer
-        </button>
-        <button
-          onClick={() => {
-            if (pntr + 1 === total) {
-              onFinish();
-              setFinished(true);
-              var soundFinish = new Audio("/sounds/finish.mp3");
-              soundFinish.play();
-              return;
-            }
-            onNext(pntr + 1);
-            setChecked(false);
-            setChosen(-1);
-          }}
-          disabled={!checked || finished}
-          className="btn btn-active"
-        >
-          {pntr + 1 === total ? "Finish" : "Next"}
-        </button>
+      <div className="flex items-center flex-wrap justify-end mt-4">
+        {!finished && (
+          <>
+            <button
+              disabled={(chosen === -1 && answer.length === 0) || checked}
+              onClick={() => verifyAnswer()}
+              className="btn btn-active mr-2"
+            >
+              Check Answer
+            </button>
+            <button
+              onClick={() => {
+                if (pntr + 1 === total) {
+                  onFinish();
+                  setFinished(true);
+                  setAnswer("");
+                  setIsCorrect(false);
+                  setChecked(false);
+                  var soundFinish = new Audio("/sounds/finish.mp3");
+                  soundFinish.play();
+                  return;
+                }
+                onNext(pntr + 1);
+                setChecked(false);
+                setIsCorrect(false);
+                setAnswer("");
+                setChosen(-1);
+              }}
+              disabled={!checked || finished}
+              className="btn btn-active"
+            >
+              {pntr + 1 === total ? "Finish" : "Next"}
+            </button>
+          </>
+        )}
         {finished && (
           <button
             onClick={() => {
               setChecked(false);
               setChosen(-1);
+              setAnswer("");
+              setIsCorrect(false);
               setFinished(false);
               tryAgain();
             }}

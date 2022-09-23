@@ -1,277 +1,1309 @@
-{
-    "mode": 0,
-    "quiz_id": "632b0d49ec45f04d9b7e44ce",
-    "quizContent": {
-        "Subject": "ITEL 316 - Prelim Reviewer",
-        "quizName": "ITEL 316 - Prelim Reviewer",
-        "questions": [
-            {
-                "type": 0,
-                "question": "API level of android 6.0",
-                "answers": ["23"],
-                "choices": ["20","21","22","23"]
-            },
-            {
-                "type": 0,
-                "question": "API level of android 5.1",
-                "answers": ["22"],
-                "choices": ["20","21","22","23"]
-            },
-            {
-                "type": 0,
-                "question": "API level of android 5.0",
-                "answers": ["21"],
-                "choices": ["20","21","22","23"]
-            },
-            {
-                "type": 0,
-                "question": "API level of android 4.4W",
-                "answers": ["20"],
-                "choices": ["20","21","22","23"]
-            },
-            {
-                "type": 0,
-                "question": "API level of android 4.4",
-                "answers": ["19"],
-                "choices": ["16","17","18","19"]
-            },{
-                "type": 0,
-                "question": "API level of android 4.3",
-                "answers": ["18"],
-                "choices": ["16","17","18","19"]
-            },{
-                "type": 0,
-                "question": "API level of android 4.2 to 4.2.2",
-                "answers": ["17"],
-                "choices": ["16","17","18","19"]
-            },{
-                "type": 0,
-                "question": "API level of android 4.1 to 4.1.1",
-                "answers": ["16"],
-                "choices": ["16","17","18","19"]
-            },{
-                "type": 0,
-                "question": "API level of android 4.0.3 to 4.0.4",
-                "answers": ["15"],
-                "choices": ["13","14","15","16"]
-            },{
-                "type": 0,
-                "question": "API level of android 4.0 to 4.0.2",
-                "answers": ["14"],
-                "choices": ["13","14","15","16"]
-            },{
-                "type": 0,
-                "question": "API level of android 3.2",
-                "answers": ["13"],
-                "choices": ["11","12","13","14"]
-            },{
-                "type": 0,
-                "question": "API level of android 3.1.x",
-                "answers": ["12"],
-                "choices": ["10","11","12","13"]
-            },{
-                "type": 0,
-                "question": "API level of android 3.0.x",
-                "answers": ["11"],
-                "choices": ["10","11","12","13"]
-            },{
-                "type": 0,
-                "question": "API level of android 2.3.3 to 2.3.4",
-                "answers": ["10"],
-                "choices": ["10","11","12","13"]
-            },{
-                "type": 0,
-                "question": "API level of android 2.3 to 2.3.2",
-                "answers": ["9"],
-                "choices": ["6","7","8","9"]
-            },{
-                "type": 0,
-                "question": "API level of android 2.2.x",
-                "answers": ["8"],
-                "choices": ["5","6","7","8"]
-            },
-            {
-                "type": 0,
-                "question": "API level of android 2.1.x",
-                "answers": ["7"],
-                "choices": ["5","6","7","8"]
-            },
-            {
-                "type": 0,
-                "question": "API level of android 2.0.1",
-                "answers": ["6"],
-                "choices": ["5","6","7","8"]
-            },
-            {
-                "type": 0,
-                "question": "API level of android 2.0",
-                "answers": ["5"],
-                "choices": ["5","6","7","8"]
-            },
-            {
-                "type": 0,
-                "question": "API level of android 1.6",
-                "answers": ["4"],
-                "choices": ["1","2","3","4"]
-            },
-            {
-                "type": 0,
-                "question": "API level of android 1.5",
-                "answers": ["3"],
-                "choices": ["1","2","3","4"]
-            },
-            {
-                "type": 0,
-                "question": "API level of android 1.1",
-                "answers": ["2"],
-                "choices": ["1","2","3","4"]
-            },
-            {
-                "type": 0,
-                "question": "API level of android 1.0",
-                "answers": ["1"],
-                "choices": ["1","2","3","4"]
-            },
-            {
-                "type": 0,
-                "question": "It is an integer value that uniquely identifies the framework API version offered by an android version.",
-                "answers": ["API Level"],
-                "choices": ["Integer level", "Open Source Level", "Access Level", "API Level"]
-            },
-            {
-                "type": 0,
-                "question": "Android 1.0 was released in ____ 2008",
-                "answers": ["September"],
-                "choices": ["August", "September", "November", "December"]
-            },
-            {
-                "type": 0,
-                "question": "What year the 1st android SDK was released?",
-                "answers": ["2007"],
-                "choices": ["2006", "2007", "2008", "2009"]
-            },
-            {
-                "type": 0,
-                "question": "Android was developed by ______ led by Google, and other companies",
-                "answers": [],
-                "choices": ["Microsoft", "Open Source Community", "Linus", "Open Handset Alliance"]
-            },
-            {
-                "type": 0,
-                "question": "Android is an _____ operating system",
-                "answers": ["Linux-based"],
-                "choices": ["MacOs-based", "Windows-based", "Linux-based"]
-            },
-            {
-                "type": 0,
-                "question": "It is a general abstraction for something that can be drawn",
-                "answers": ["Drawable"],
-                "choices": ["Video", "Image", "Drawable", "Animation"]
-            },
-            {
-                "type": 0,
-                "question": "You can use the _____ class and its subclasses to draw shapes and images.",
-                "answers": ["Drawable"],
-                "choices": ["Java","Drawable", "Animation"]
-            },
-            {
-                "type": 0,
-                "question": "Most of Android UI is defined in ____ files",
-                "answers": ["XML"],
-                "choices": ["Java Class", "XML"]
-            },
-            {
-                "type": 0,
-                "question": "The user interface of an Android application is built using _____.",
-                "answers": ["Views"],
-                "choices": ["Intent","XML","Activity","Views"]
-            },
-            {
-                "type": 0,
-                "question": "Intent sendIntent = new Intent(getApplicationContext(), ActivityTwo.class); startActivity(______);",
-                "answers": ["sendIntent"],
-                "choices": ["new Intent","this.Intent","sendIntent","ActivityTwo.class"]
-            },
-            {
-                "type": 0,
-                "question": "Android system initiates code in an Activity instance by invoking specific callback methods",
-                "answers": ["True"],
-                "choices": ["True", "False"]
-            },
-            {
-                "type": 0,
-                "question": "In android, app/program are launched with a main() method",
-                "answers": ["False"],
-                "choices": ["True", "False"]
-            },{
-                "type": 0,
-                "question": "It is a crucial component of an Android app",
-                "answers": ["Activity class", "Activity"],
-                "choices": ["Activity class", "Intent", "XML", "Java"]
-            },{
-                "type": 0,
-                "question": "Each application window is called an activity and they can be called using ____",
-                "answers": ["Intent", "Intents"],
-                "choices": ["Intent", "Activity", "TextView", "EmptyActivity"]
-            },{
-                "type": 0,
-                "question": "Android, we can only put one application in focus at a time",
-                "answers": ["True"],
-                "choices": ["True", "False"]
-            },
-            {
-                "type": 0,
-                "question": "Android OS had only been used since ____",
-                "answers": [
-                    "2003"
-                ],
-                "choices": [
-                    "2008",
-                    "2003",
-                    "2005",
-                    "2006"
-                ]
-            },
-            {
-                "type": 0,
-                "question": "Who owns android?",
-                "answers": [
-                    "Google"
-                ],
-                "choices": [
-                    "Google",
-                    "Microsoft",
-                    "Amazon",
-                    "Apple"
-                ]
-            },
-            {
-                "type": 0,
-                "question": "What component is used to display text?",
-                "answers": [
-                    "TextView"
-                ],
-                "choices": [
-                    "Intent",
-                    "ImageView",
-                    "Button",
-                    "TextView"
-                ]
-            },
-            {
-                "type": 0,
-                "question": "What programming language is used in android?",
-                "answers": [
-                    "Java"
-                ],
-                "choices": [
-                    "Cobol",
-                    "C",
-                    "Java",
-                    "Rust"
-                ]
-            }
-        ],
-        "answeredBy": []
+[
+    {
+        "mode": 0,
+        "quiz_id": "632b0d49ec45f04d9b7e44ce",
+        "quizContent": {
+            "Subject": "ITEL 316 - Prelim Reviewer",
+            "quizName": "ITEL 316 - Prelim Reviewer",
+            "questions": [
+                {
+                    "type": 0,
+                    "question": "API level of android 6.0",
+                    "answers": [
+                        "23"
+                    ],
+                    "choices": [
+                        "20",
+                        "21",
+                        "22",
+                        "23"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 5.1",
+                    "answers": [
+                        "22"
+                    ],
+                    "choices": [
+                        "20",
+                        "21",
+                        "22",
+                        "23"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 5.0",
+                    "answers": [
+                        "21"
+                    ],
+                    "choices": [
+                        "20",
+                        "21",
+                        "22",
+                        "23"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 4.4W",
+                    "answers": [
+                        "20"
+                    ],
+                    "choices": [
+                        "20",
+                        "21",
+                        "22",
+                        "23"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 4.4",
+                    "answers": [
+                        "19"
+                    ],
+                    "choices": [
+                        "16",
+                        "17",
+                        "18",
+                        "19"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 4.3",
+                    "answers": [
+                        "18"
+                    ],
+                    "choices": [
+                        "16",
+                        "17",
+                        "18",
+                        "19"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 4.2 to 4.2.2",
+                    "answers": [
+                        "17"
+                    ],
+                    "choices": [
+                        "16",
+                        "17",
+                        "18",
+                        "19"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 4.1 to 4.1.1",
+                    "answers": [
+                        "16"
+                    ],
+                    "choices": [
+                        "16",
+                        "17",
+                        "18",
+                        "19"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 4.0.3 to 4.0.4",
+                    "answers": [
+                        "15"
+                    ],
+                    "choices": [
+                        "13",
+                        "14",
+                        "15",
+                        "16"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 4.0 to 4.0.2",
+                    "answers": [
+                        "14"
+                    ],
+                    "choices": [
+                        "13",
+                        "14",
+                        "15",
+                        "16"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 3.2",
+                    "answers": [
+                        "13"
+                    ],
+                    "choices": [
+                        "11",
+                        "12",
+                        "13",
+                        "14"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 3.1.x",
+                    "answers": [
+                        "12"
+                    ],
+                    "choices": [
+                        "10",
+                        "11",
+                        "12",
+                        "13"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 3.0.x",
+                    "answers": [
+                        "11"
+                    ],
+                    "choices": [
+                        "10",
+                        "11",
+                        "12",
+                        "13"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 2.3.3 to 2.3.4",
+                    "answers": [
+                        "10"
+                    ],
+                    "choices": [
+                        "10",
+                        "11",
+                        "12",
+                        "13"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 2.3 to 2.3.2",
+                    "answers": [
+                        "9"
+                    ],
+                    "choices": [
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 2.2.x",
+                    "answers": [
+                        "8"
+                    ],
+                    "choices": [
+                        "5",
+                        "6",
+                        "7",
+                        "8"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 2.1.x",
+                    "answers": [
+                        "7"
+                    ],
+                    "choices": [
+                        "5",
+                        "6",
+                        "7",
+                        "8"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 2.0.1",
+                    "answers": [
+                        "6"
+                    ],
+                    "choices": [
+                        "5",
+                        "6",
+                        "7",
+                        "8"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 2.0",
+                    "answers": [
+                        "5"
+                    ],
+                    "choices": [
+                        "5",
+                        "6",
+                        "7",
+                        "8"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 1.6",
+                    "answers": [
+                        "4"
+                    ],
+                    "choices": [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 1.5",
+                    "answers": [
+                        "3"
+                    ],
+                    "choices": [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 1.1",
+                    "answers": [
+                        "2"
+                    ],
+                    "choices": [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "API level of android 1.0",
+                    "answers": [
+                        "1"
+                    ],
+                    "choices": [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "It is an integer value that uniquely identifies the framework API version offered by an android version.",
+                    "answers": [
+                        "API Level"
+                    ],
+                    "choices": [
+                        "Integer level",
+                        "Open Source Level",
+                        "Access Level",
+                        "API Level"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Android 1.0 was released in ____ 2008",
+                    "answers": [
+                        "September"
+                    ],
+                    "choices": [
+                        "August",
+                        "September",
+                        "November",
+                        "December"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "What year the 1st android SDK was released?",
+                    "answers": [
+                        "2007"
+                    ],
+                    "choices": [
+                        "2006",
+                        "2007",
+                        "2008",
+                        "2009"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Android was developed by ______ led by Google, and other companies",
+                    "answers": [],
+                    "choices": [
+                        "Microsoft",
+                        "Open Source Community",
+                        "Linus",
+                        "Open Handset Alliance"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Android is an _____ operating system",
+                    "answers": [
+                        "Linux-based"
+                    ],
+                    "choices": [
+                        "MacOs-based",
+                        "Windows-based",
+                        "Linux-based"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "It is a general abstraction for something that can be drawn",
+                    "answers": [
+                        "Drawable"
+                    ],
+                    "choices": [
+                        "Video",
+                        "Image",
+                        "Drawable",
+                        "Animation"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "You can use the _____ class and its subclasses to draw shapes and images.",
+                    "answers": [
+                        "Drawable"
+                    ],
+                    "choices": [
+                        "Java",
+                        "Drawable",
+                        "Animation"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Most of Android UI is defined in ____ files",
+                    "answers": [
+                        "XML"
+                    ],
+                    "choices": [
+                        "Java Class",
+                        "XML"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "The user interface of an Android application is built using _____.",
+                    "answers": [
+                        "Views"
+                    ],
+                    "choices": [
+                        "Intent",
+                        "XML",
+                        "Activity",
+                        "Views"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Intent sendIntent = new Intent(getApplicationContext(), ActivityTwo.class); startActivity(______);",
+                    "isCode" : true,
+                    "answers": [
+                        "sendIntent"
+                    ],
+                    "choices": [
+                        "new Intent",
+                        "this.Intent",
+                        "sendIntent",
+                        "ActivityTwo.class"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Android system initiates code in an Activity instance by invoking specific callback methods",
+                    "answers": [
+                        "True"
+                    ],
+                    "choices": [
+                        "True",
+                        "False"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "In android, app/program are launched with a main() method",
+                    "answers": [
+                        "False"
+                    ],
+                    "choices": [
+                        "True",
+                        "False"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "It is a crucial component of an Android app",
+                    "answers": [
+                        "Activity class",
+                        "Activity"
+                    ],
+                    "choices": [
+                        "Activity class",
+                        "Intent",
+                        "XML",
+                        "Java"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Each application window is called an activity and they can be called using ____",
+                    "answers": [
+                        "Intent",
+                        "Intents"
+                    ],
+                    "choices": [
+                        "Intent",
+                        "Activity",
+                        "TextView",
+                        "EmptyActivity"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Android, we can only put one application in focus at a time",
+                    "answers": [
+                        "True"
+                    ],
+                    "choices": [
+                        "True",
+                        "False"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Android OS had only been used since ____",
+                    "answers": [
+                        "2003"
+                    ],
+                    "choices": [
+                        "2008",
+                        "2003",
+                        "2005",
+                        "2006"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Who owns android?",
+                    "answers": [
+                        "Google"
+                    ],
+                    "choices": [
+                        "Google",
+                        "Microsoft",
+                        "Amazon",
+                        "Apple"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "What component is used to display text?",
+                    "answers": [
+                        "TextView"
+                    ],
+                    "choices": [
+                        "Intent",
+                        "ImageView",
+                        "Button",
+                        "TextView"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "What programming language is used in android?",
+                    "answers": [
+                        "Java"
+                    ],
+                    "choices": [
+                        "Cobol",
+                        "C",
+                        "Java",
+                        "Rust"
+                    ]
+                }
+            ],
+            "answeredBy": []
+        }
+    },
+    {
+        "mode": 2,
+        "quiz_id": "632d16286ac58ef563d48616",
+        "quizContent": {
+            "Subject": "SADM - Prelim Reviewer",
+            "quizName": "SADM - Prelim Reviewer",
+            "questions": [
+                {
+                    "type": 0,
+                    "question": "is the study of system change",
+                    "answers": [
+                        "Program evolution dynamic"
+                    ],
+                    "choices": [
+                        "Software Maintenance",
+                        "Program evolution dynamic",
+                        "Development"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "is the general process of changing a system after it has been diverted",
+                    "answers": [
+                        "Software Maintenance"
+                    ],
+                    "choices": [
+                        "Software Maintenance",
+                        "Program evolution dynamic",
+                        "Development"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "What type of maintenance? Changing a system to correct deficiencies in the way meets its requirements",
+                    "answers": [
+                        "Maintenance to repair software faults"
+                    ],
+                    "choices": [
+                        "Maintenance to repair software faults",
+                        "Maintenance to adapt software to a different operating environment",
+                        "Maintenance to add to or modify the system’s functionality"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "What type of maintenance? Changing a system so that it operates in a different environment (computer, OS, etc.) from its initial implementation",
+                    "answers": [
+                        "Maintenance to adapt software to a different operating environment"
+                    ],
+                    "choices": [
+                        "Maintenance to repair software faults",
+                        "Maintenance to adapt software to a different operating environment",
+                        "Maintenance to add to or modify the system’s functionality"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "What type of maintenance? Changing a system so that it operates in a different environment (computer, OS, etc.) from its initial implementation",
+                    "answers": [
+                        "Maintenance to add to or modify the system’s functionality"
+                    ],
+                    "choices": [
+                        "Maintenance to repair software faults",
+                        "Maintenance to adapt software to a different operating environment",
+                        "Maintenance to add to or modify the system’s functionality"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Maintinance Examples are : Y2k, Anti-Virus Software, Operating system patching, Commercial Software in General",
+                    "answers": [
+                        "True"
+                    ],
+                    "choices": [
+                        "True",
+                        "False"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Maintenance process does not vary depending on the types of software being maintained",
+                    "answers": [
+                        "False"
+                    ],
+                    "choices": [
+                        "True",
+                        "False"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "takes advantage of the local processing power on PCs to implement a graphical user interface",
+                    "answers": [
+                        "UI distribution"
+                    ],
+                    "choices": [
+                        "Software distribution",
+                        "UI distribution",
+                        "Maintinance destribution"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Is concerned with assessing which parts of the system may cause problems and have high maintenance costs",
+                    "answers": [
+                        "Maintenance prediction"
+                    ],
+                    "choices": [
+                        "Software distribution",
+                        "Maintenance prediction",
+                        "Maintinance destribution"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "The two main types of documentation created are _________",
+                    "answers": [
+                        "Process and Product documents"
+                    ],
+                    "choices": [
+                        "Process and Product output",
+                        "Process and Product documents",
+                        "Input and Process"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Used to record and track the development process",
+                    "answers": [
+                        "Process Documentation"
+                    ],
+                    "choices": [
+                        "Documentation requirements",
+                        "Process Documentation",
+                        "Product Documentation",
+                        "Document Quality",
+                        "Document Structure",
+                        "Standards"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "This documentation is created to allow for successful management of a software product",
+                    "answers": [
+                        "Process Documentation"
+                    ],
+                    "choices": [
+                        "Documentation requirements",
+                        "Process Documentation",
+                        "Product Documentation",
+                        "Document Quality",
+                        "Document Structure",
+                        "Standards"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Has a relatively short lifespan",
+                    "answers": [
+                        "Process Documentation"
+                    ],
+                    "choices": [
+                        "Documentation requirements",
+                        "Process Documentation",
+                        "Product Documentation",
+                        "Document Quality",
+                        "Document Structure",
+                        "Standards"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Some items, such as papers that describe design decisions should be extracted and moved into the category when they become implemented",
+                    "answers": [
+                        "product documentation"
+                    ],
+                    "choices": [
+                        "product documentation",
+                        "Process documentation",
+                        "Document structure"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Describes how the system works, but not how to operate it",
+                    "answers": [
+                        "System Documentation"
+                    ],
+                    "choices": [
+                        "System Documentation",
+                        "product documentation",
+                        "Process documentation",
+                        "Document structure"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "User Documentation has two main types : End User & System administrator",
+                    "answers": [
+                        "True"
+                    ],
+                    "choices": [
+                        "True",
+                        "False"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "There are five important areas that should be documented for a formal release of a software application",
+                    "answers": [
+                        "True"
+                    ],
+                    "choices": [
+                        "True",
+                        "False"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "When was the change made?",
+                    "answers": [
+                        "Synchronization"
+                    ],
+                    "choices": [
+                        "Synchronization",
+                        "Identification",
+                        "Naming",
+                        "Authentication"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Who made the change?",
+                    "answers": [
+                        "Identification"
+                    ],
+                    "choices": [
+                        "Synchronization",
+                        "Identification",
+                        "Naming",
+                        "Authentication"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "What components of the system were changed?",
+                    "answers": [
+                        "Naming"
+                    ],
+                    "choices": [
+                        "Synchronization",
+                        "Identification",
+                        "Naming",
+                        "Authentication"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Was the change made correctly?",
+                    "answers": [
+                        "Authentication"
+                    ],
+                    "choices": [
+                        "Synchronization",
+                        "Identification",
+                        "Naming",
+                        "Authentication"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Who authorized that the change be made",
+                    "answers": [
+                        "Identification"
+                    ],
+                    "choices": [
+                        "Authentication",
+                        "Routing",
+                        "Cancellation",
+                        "Delegation"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Who was notified of the change",
+                    "answers": [
+                        "Authorization"
+                    ],
+                    "choices": [
+                        "Authorization",
+                        "Routing",
+                        "Cancellation",
+                        "Delegation"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Who was notified of the change?",
+                    "answers": [
+                        "Routing"
+                    ],
+                    "choices": [
+                        "Routing",
+                        "Cancellation",
+                        "Delegation",
+                        "Valuation"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Who can cancel the request for change?",
+                    "answers": [
+                        "Cancellation"
+                    ],
+                    "choices": [
+                        "Routing",
+                        "Cancellation",
+                        "Delegation",
+                        "Valuation"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Who is responsible for the change?",
+                    "answers": [
+                        "Delegation"
+                    ],
+                    "choices": [
+                        "Routing",
+                        "Cancellation",
+                        "Delegation",
+                        "Valuation"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "What is the priority of the change?",
+                    "answers": [
+                        "Valuation"
+                    ],
+                    "choices": [
+                        "Routing",
+                        "Cancellation",
+                        "Delegation",
+                        "Valuation"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "any development artifact whose change is significant",
+                    "answers": [
+                        "Workproduct"
+                    ],
+                    "choices": [
+                        "Horizontal traceability",
+                        "Workproduct",
+                        "Vertical traceability"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "relationships of components across collections of workproducts",
+                    "answers": [
+                        "Horizontal traceability"
+                    ],
+                    "choices": [
+                        "Horizontal traceability",
+                        "Workproduct",
+                        "Vertical traceability"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "relationships among parts of a workproduct",
+                    "answers": [
+                        "Vertical traceability"
+                    ],
+                    "choices": [
+                        "Horizontal traceability",
+                        "Workproduct",
+                        "Vertical traceability"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Which is not belong to the five kinds of traceability",
+                    "answers": [
+                        "Using explicit links"
+                    ],
+                    "choices": [
+                        "object-to-object",
+                        "association-to-association",
+                        "use case-to-use case",
+                        "Using explicit links",
+                        "use case-to-object",
+                        "two-dimensional object-to-object"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "static analysis adds more information",
+                    "answers": [
+                        "Redocumentation"
+                    ],
+                    "choices": [
+                        "Redocumentation",
+                        "Restructuring",
+                        "Reverse engineering",
+                        "Reengineering"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "transform to improve code structure",
+                    "answers": [
+                        "Restructuring"
+                    ],
+                    "choices": [
+                        "Redocumentation",
+                        "Restructuring",
+                        "Reverse engineering",
+                        "Reengineering"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "trecreate design and specification information from the code",
+                    "answers": [
+                        "Reverse engineering"
+                    ],
+                    "choices": [
+                        "Redocumentation",
+                        "Restructuring",
+                        "Reverse engineering",
+                        "Reengineering"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "reverse engineer and then make changes to specification and design to complete the logical model",
+                    "answers": [
+                        "Reengineering"
+                    ],
+                    "choices": [
+                        "Redocumentation",
+                        "Restructuring",
+                        "Reverse engineering",
+                        "Reengineering"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Problem may change dramatically",
+                    "answers": [
+                        "S-system"
+                    ],
+                    "choices": [
+                        "S-system",
+                        "P-system",
+                        "E-system"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Changes constantly",
+                    "answers": [
+                        "S-system"
+                    ],
+                    "choices": [
+                        "S-system",
+                        "P-system",
+                        "E-system"
+                    ]
+                },
+                {
+                    "type": 0,
+                    "question": "Is an integral part of the world it models",
+                    "answers": [
+                        "E-system"
+                    ],
+                    "choices": [
+                        "S-system",
+                        "P-system",
+                        "E-system"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Measuring maintainability is difficult",
+                    "answers" : ["True"],
+                    "choices" : [
+                        "True",
+                        "False"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Software rejuvenation does not involves redocumenting, restructuring, reverse engineering, and reengineering",
+                    "answers" : ["False"],
+                    "choices" : [
+                        "True",
+                        "False"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Identify and remove defects",
+                    "answers" : ["Corrective Maintenance"],
+                    "choices" : [
+                        "Corrective Maintenance",
+                        "Perfective Maintenance",
+                        "Adaptive Maintenance",
+                        "Preventive Maintenance",
+                        "Emergency Maintenance"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Correct actual errors ",
+                    "answers" : ["Corrective Maintenance"],
+                    "choices" : [
+                        "Corrective Maintenance",
+                        "Perfective Maintenance",
+                        "Adaptive Maintenance",
+                        "Preventive Maintenance",
+                        "Emergency Maintenance"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Improve performance, dependability, maintainability",
+                    "answers" : ["Perfective Maintenance"],
+                    "choices" : [
+                        "Corrective Maintenance",
+                        "Perfective Maintenance",
+                        "Adaptive Maintenance",
+                        "Preventive Maintenance",
+                        "Emergency Maintenance"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Adapt to a new/upgraded environment (e.g., hardware, operating system, middleware)",
+                    "answers" : ["Adaptive Maintenance"],
+                    "choices" : [
+                        "Corrective Maintenance",
+                        "Perfective Maintenance",
+                        "Adaptive Maintenance",
+                        "Preventive Maintenance",
+                        "Emergency Maintenance"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Identify and detect latent faults",
+                    "answers" : ["Preventive Maintenance"],
+                    "choices" : [
+                        "Corrective Maintenance",
+                        "Perfective Maintenance",
+                        "Adaptive Maintenance",
+                        "Preventive Maintenance",
+                        "Emergency Maintenance"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Systems with safety concerns",
+                    "answers" : ["Preventive Maintenance"],
+                    "choices" : [
+                        "Corrective Maintenance",
+                        "Perfective Maintenance",
+                        "Adaptive Maintenance",
+                        "Preventive Maintenance",
+                        "Emergency Maintenance"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Unscheduled corrective maintenance (Risks due to reduced testing)",
+                    "answers" : ["Emergency Maintenance"],
+                    "choices" : [
+                        "Corrective Maintenance",
+                        "Perfective Maintenance",
+                        "Adaptive Maintenance",
+                        "Preventive Maintenance",
+                        "Emergency Maintenance"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Adaptive maintinance belongs to ",
+                    "answers" : ["Post-Delivery Development Migration"],
+                    "choices" : [
+                        "Post-Delivery Development Migration",
+                        "Bug Fixing"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Perfective maintenance belongs to ",
+                    "answers" : ["Post-Delivery Development Migration"],
+                    "choices" : [
+                        "Post-Delivery Development Migration",
+                        "Bug Fixing"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Preventive maintenance belongs to",
+                    "answers" : ["Bug Fixing"],
+                    "choices" : [
+                        "Post-Delivery Development Migration",
+                        "Bug Fixing"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Emergency Maintenance belongs to",
+                    "answers" : ["Bug Fixing"],
+                    "choices" : [
+                        "Post-Delivery Development Migration",
+                        "Bug Fixing"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "Corrective maintenance belongs to",
+                    "answers" : ["Bug Fixing"],
+                    "choices" : [
+                        "Post-Delivery Development Migration",
+                        "Bug Fixing"
+                    ]
+                },{
+                    "type" : 0,
+                    "question" : "The word ______ ",
+                    "answers" : ["Bug Fixing"],
+                    "choices" : [
+                        "Post-Delivery Development Migration",
+                        "Bug Fixing"
+                    ]
+                }
+            ],
+            "answeredBy": []
+        }
+    },
+    {
+        "mode": 1,
+        "quiz_id": "632d16286ac58ef563d48616", 
+        "quizContent": {
+            "Subject": "SADM - Prelim Reviewer",
+            "quizName": "SADM - Prelim Reviewer",
+            "questions": [
+                {
+                    "type": 0,
+                    "question": "Cariñosa is a Spanish word pronounced as ______ meaning the loving or affectionate one",
+                    "answers": ["kaɾiˈɲosa"],
+                    "choices": ["kaɾiˈɲoza", "kariˈɲosa"]
+                },{
+                    "type": 0,
+                    "question": "It is a Philippine dance of Hispanic origin from the Maria Clara suite of Philippine folk dances, where the fan or handkerchief plays an instrumental role as it places the couple in romance scenario",
+                    "answers": ["Cariñosa"],
+                    "choices": ["tinikling", "Cariñosa"]
+                },{
+                    "type": 0,
+                    "question": "is closely associate with the island of ",
+                    "answers": ["Visayas", "Panay"],
+                    "choices": ["Luzon", "Panay", "Visayas", "Palawan"]
+                },{
+                    "type": 0,
+                    "question": "Cariñosa is a courtship dance that portrays acts of flirtation between a man and a ____.",
+                    "answers": ["woman", "babae"],
+                    "choices": ["tomboy", "gay/bakla", "butiki", "woman", "baboy"]
+                },{
+                    "type": 0,
+                    "question": "Cariñosa is introduced by spaniards in the __ century",
+                    "answers": ["16"],
+                    "choices": ["17", "14", "15", "18", "16"]
+                },{
+                    "type": 0,
+                    "question": "What book first ever published notation of the Cariñosa",
+                    "answers": ["Philippine Folk Dances and Games"],
+                    "choices": ["Philippine Folk Dances and Games ", "Noli Me Tangere"]
+                },{
+                    "type": 0,
+                    "question": "What book first ever published notation of the Cariñosa",
+                    "answers": ["Philippine Folk Dances and Games"],
+                    "choices": ["Philippine Folk Dances and Games ", "Noli Me Tangere"]
+                },{
+                    "type": 0,
+                    "question": "Cariñosa resebles what",
+                    "answers": ["hide and seek"],
+                    "choices": ["langit lupa", "hide and seek", "patintero"]
+                },{
+                    "type": 0,
+                    "question": "In Cariñosa, male dancers wear what?",
+                    "answers": ["shirt and trousers"],
+                    "choices": ["jeans & tshirt", "shirt and trousers"]
+                },{
+                    "type": 0,
+                    "question": "It is a dance developed by people that reflect the life of the people of a certain country or region",
+                    "answers": ["folk dance"],
+                    "choices": ["ritual dance", "hiphop", "folk dance"]
+                },{
+                    "type": 0,
+                    "question": "Cariñosa is ___ rhythm",
+                    "answers": ["3/4"],
+                    "choices": ["1/4", "2/4", "3/4"]
+                }
+            ],
+            "answeredBy": []
+        }
+    },
+    {
+        "mode": 1,
+        "quizContent": {
+            "Subject": "ITEL312 - Prelim Reviewer",
+            "quizName": "ITEL312 - Prelim Reviewer",
+            "questions":[
+                {
+                    "type": 0,
+                    "question": "It relies on a user name and password to protect data",
+                    "answers": ["Single-factor authentication"],
+                    "choices": ["Single-factor authentication", "Multifactor authentication"] 
+                },{
+                    "type": 0,
+                    "question": "It utilizes two distinct stages during authentication",
+                    "answers": ["Multifactor authentication"],
+                    "choices": ["Single-factor authentication", "Multifactor authentication"] 
+                },{
+                    "type": 0,
+                    "question": "It is always a good method to perform log analysis. It gives you the benefit and confidence that you have looked at the logs and have also verified if the automated tool has done the right job.",
+                    "answers": ["Manual review"],
+                    "choices": ["Manual review", "Privilege Management"] 
+                },{
+                    "type": 1,
+                    "question": "In a network environment, user accounts are saved in the directory services, such as _______",
+                    "answers": ["Active Directory"],
+                    "choices": [] 
+                },{
+                    "type": 0,
+                    "question": "provides several benefits over the manual method",
+                    "answers": ["Privileged Access Management"],
+                    "choices": ["Privileged Access Management", "Super user account", "Domain administrative account"] 
+                },{
+                    "type": 1,
+                    "question": "It is  an  authentication  method  that enables  users  to  securely  authenticate  with  multiple applications  and  websites  by  using  just  one  set  of credentials.",
+                    "answers": ["Single  sign-on", "Single  sign on", "SSO"],
+                    "choices": [] 
+                },{
+                    "type": 1,
+                    "question": "To save the hassle for users to remember so many credentials, you can use ____",
+                    "answers": ["Single  sign-on", "Single  sign on", "SSO"],
+                    "choices": [] 
+                },{
+                    "type": 1,
+                    "question": "This is the default mode. SELinux will operate normally in this mode, enforing a specified policy on the entire system",
+                    "answers": ["Enforcing"],
+                    "choices": [] 
+                },{
+                    "type": 1,
+                    "question": "In this mode, SELinux will enforce the specified policy as Enforcing mode allows, although it will not deny any operations",
+                    "answers": ["Permissive"],
+                    "choices": [] 
+                },{
+                    "type": 1,
+                    "question": "In  this  mode,  the  system  will  not  enforce  the  specified policy and it does not label persistent objects (files, folders etc).",
+                    "answers": ["Disabled"],
+                    "choices": [] 
+                }
+            ],
+            "answeredBy": []
+        }
     }
-}
+]

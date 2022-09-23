@@ -74,7 +74,7 @@ export default function Quiz() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex justify-center mt-20 md:mt-24 h-screen relative">
+      <main className="flex justify-center mt-20 md:mt-24 min-h-screen relative">
         <Loading loading={loading} />
 
         {questions.length > 0 && !loading && (
@@ -100,13 +100,13 @@ export default function Quiz() {
         {!loading && questions.length === 0 && (
           <div>
             <p className="text-center">No Question In This Quiz</p>
-            <img className="absolute bottom-0 left-0" src="https://c.tenor.com/qGJ0OTouREEAAAAi/anya-spy-x-family-anime.gif" />
+            <img className="absolute bottom-0 left-0 w-40" src="https://c.tenor.com/qGJ0OTouREEAAAAi/anya-spy-x-family-anime.gif" />
           </div>
         )}
 
         {
             finished && 
-          <img className="absolute bottom-0 left-0" src="https://c.tenor.com/qGJ0OTouREEAAAAi/anya-spy-x-family-anime.gif" />
+          <img className="absolute bottom-0 left-0 w-40 md:w-96" src="https://c.tenor.com/qGJ0OTouREEAAAAi/anya-spy-x-family-anime.gif" />
 
         }
       </main>

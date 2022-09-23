@@ -119,7 +119,7 @@ export default function Home() {
                           <div className="badge badge-sm badge-secondary">{q.questions.length}</div>
                           questions
                         </button>
-                    <div className="mt-6 md:flex justify-between">
+                    <div className="mt-6 flex justify-between">
                       <p className="mt-4 text-xs opacity-50">
                         {dateToBeutify(q.cat)}
                       </p>
