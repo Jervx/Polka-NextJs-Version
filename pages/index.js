@@ -71,7 +71,7 @@ export default function Home() {
             <Loading loading={loading} />
           </div>
           <div className="flex justify-center mt-4">
-            <BsFillJournalBookmarkFill className="text-2xl text-primary" />
+            <BsFillJournalBookmarkFill className="text-2xl text-accent" />
           </div>
           <p className="text-center mt-4">Reviewers</p>
           <p className="text-center justify-center text-sm opacity-75 mt-4">
