@@ -66,7 +66,7 @@ const QuizContainer = ({
       </div>
       {finished && (
         <>
-          <p className="text-center w-full mt-16 text-xl">You've got</p>
+          <p className="text-center w-full mt-16 text-xl">You&apos;ve got</p>
           <div className="flex justify-center mt-4 mb-16">
             <p className={`text-4xl ${ myScore / total * 100 > 75 ? 'text-success' : 'text-warning' }`}>
               {myScore} : {total}
