@@ -12,6 +12,7 @@ export default async function handler(req, res) {
 
 
   try {
+    // find by id
     if (mode === 0) {
       if (quiz_id) {
         const quiz = await Quizes.findOne({ _id: new ObjectId(quiz_id) });
@@ -28,11 +29,13 @@ export default async function handler(req, res) {
       }
     }
 
+    // create
     if (mode === 1) {
       const createQuiz = await Quizes.create({ ...quizContent });
       return res.status(200).json({ message: "created!" });
     }
 
+    // update
     if (mode === 2) {
       const updateQuiz = await Quizes.updateOne(
         { _id: new ObjectId(quiz_id) },
@@ -41,6 +44,7 @@ export default async function handler(req, res) {
       return res.status(200).json({ message: "created!" });
     }
 
+    // all
     if (mode === 3){
         const quizes = await Quizes.find({});
         return res.status(200).json(quizes)
