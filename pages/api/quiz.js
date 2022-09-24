@@ -8,7 +8,7 @@ mongoConnect();
 
 export default async function handler(req, res) {
   
-  const { mode, quiz_id, quiz_name, quizContent } = req.body;
+  const { mode, quiz_id, quiz_name, quizContent, quizes } = req.body;
 
 
   try {
@@ -48,6 +48,11 @@ export default async function handler(req, res) {
     if (mode === 3){
         const quizes = await Quizes.find({});
         return res.status(200).json(quizes)
+    }
+
+    if(mode === 4){
+        const quizes = await Quizes.insertMany(quizes)
+        return res.status(200).json("Inserted all quizes")
     }
 
   } catch (e) {
