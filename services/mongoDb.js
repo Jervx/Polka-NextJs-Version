@@ -6,8 +6,7 @@ async function dbConnect() {
   if (connection.isConnected) {
     return;
   }
-  const db = await mongoose.connect(
-    "mongodb+srv://jervx:helloworld@jervxcluster.p97hy8e.mongodb.net/PolkaQuiz?retryWrites=true&w=majority",
+  const db = await mongoose.connect(process.env.MONGOURI,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,

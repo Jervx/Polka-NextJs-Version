@@ -4,6 +4,7 @@ const QuizSchema = new Schema({
   Subject: {type : String, default : ""},
   quizName : { type : String, default : ""},
   quizType : { type : Number, default : 0},
+  quizType : { type : Number, default : 0},
   questions : { type : Array, default : [] },
   answeredBy : { type : Array, default : []},
   cat : { type : Date, default : Date.now },

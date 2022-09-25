@@ -1,8 +1,28 @@
 import ThemeSelector from "./ThemeSelector";
-import Link from "next/link";
+//import GoogleOneTapLogin from "react-google-one-tap-login";
+
+import { useState, useEffect } from "react";
+
 const Navbar = () => {
+  //const CLID = process.env.CLID;
+  //const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // const value = ('; '+document.cookie).split(`; g_state=`).pop().split(';')[0]
+    // document.cookie = `g_state=${value}; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    // setMounted(true);
+  }, []);
+
   return (
     <nav className="navbar bg-base-100 shadow-md fixed top-0 z-20">
+      {/* {mounted && (
+        <GoogleOneTapLogin
+          onError={(error) => console.log(error)}
+          onSuccess={(response) => console.log(response)}
+          googleAccountConfigs={{ client_id: CLID }}
+        />
+      )} */}
+
       <div className="flex-1">
         <a
           href={"/"}
@@ -37,9 +57,9 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a className="justify-between">Logout 
-              <span className="badge">soon..</span>
-
+              <a className="justify-between">
+                Logout
+                <span className="badge">soon..</span>
               </a>
             </li>
           </ul>
