@@ -426,7 +426,7 @@
             },
             {
                 "type": 0,
-                "question": "Android is an _____ operating system",
+                "question": "Android is a _____ operating system",
                 "answers": [
                     "Linux-based"
                 ],

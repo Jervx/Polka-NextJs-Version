@@ -41,7 +41,7 @@ export default async function handler(req, res) {
         { _id: new ObjectId(quiz_id) },
         { $set: { ...quizContent } }
       );
-      return res.status(200).json({ message: "created!" });
+      return res.status(200).json({ message: "Updated!" });
     }
 
     // all
@@ -50,11 +50,13 @@ export default async function handler(req, res) {
         return res.status(200).json(quizes)
     }
 
+    // insert all
     if(mode === 4){
         const quizeS = await Quizes.insertMany(quizes)
         return res.status(200).json("Inserted all quizes")
     }
 
+    // delete one
     if(mode === -1){
         if(quiz_id){
             const del = await Quizes.deleteOne({ _id : new ObjectId(quiz_id)})
