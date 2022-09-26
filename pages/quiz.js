@@ -136,7 +136,7 @@ export default function Quiz() {
         )}
 
         {
-            finished || true && 
+            finished && 
             <Character  mouseX={mouseX} mouseY={mouseY}/>
         }
       </main>
