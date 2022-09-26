@@ -108,9 +108,9 @@ export default function Quiz() {
         <meta name="description" content="A very simple quiz app site for students" />
         <meta name="description" content="A very simple quiz app site for students" />
 
-        <meta itemprop="name" content="Polka Quiz"/>
-        <meta itemprop="description" content="A very simple quiz app site for students"/>
-        <meta itemprop="image" content="/metacover.png"/>
+        <meta itemProp="name" content="Polka Quiz"/>
+        <meta itemProp="description" content="A very simple quiz app site for students"/>
+        <meta itemProp="image" content="/metacover.png"/>
         <meta name="google-site-verification" content="BMsOphT0waH2PjmDohyreInesLvtdqjT7l2NKibBZfA" />
 
         <meta property="og:url" content="https://polka-quiz.vercel.app"/>
@@ -152,7 +152,7 @@ export default function Quiz() {
         {!loading && questions.length === 0 && (
           <div>
             <p className="text-center">No Question In This Quiz</p>
-            <img className="absolute bottom-0 left-0 w-40" src="https://c.tenor.com/qGJ0OTouREEAAAAi/anya-spy-x-family-anime.gif" />
+            <img alt="anya sad" className="absolute bottom-0 left-0 w-40" src="https://c.tenor.com/qGJ0OTouREEAAAAi/anya-spy-x-family-anime.gif" />
           </div>
         )}
 

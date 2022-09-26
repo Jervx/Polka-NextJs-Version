@@ -55,9 +55,9 @@ export default function Home() {
         <meta name="description" content="A very simple quiz app site for students" />
         <meta name="description" content="A very simple quiz app site for students" />
 
-        <meta itemprop="name" content="Polka Quiz"/>
-        <meta itemprop="description" content="A very simple quiz app site for students"/>
-        <meta itemprop="image" content="/metacover.png"/>
+        <meta itemProp="name" content="Polka Quiz"/>
+        <meta itemProp="description" content="A very simple quiz app site for students"/>
+        <meta itemProp="image" content="/metacover.png"/>
         <meta name="google-site-verification" content="BMsOphT0waH2PjmDohyreInesLvtdqjT7l2NKibBZfA" />
 
         <meta property="og:url" content="https://polka-quiz.vercel.app"/>
