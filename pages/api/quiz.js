@@ -46,13 +46,20 @@ export default async function handler(req, res) {
 
     // all
     if (mode === 3){
-        const quizes = await Quizes.find({});
+        const quizes = await Quizes.find({}).sort({cat : -1});
         return res.status(200).json(quizes)
     }
 
     if(mode === 4){
-        const quizes = await Quizes.insertMany(quizes)
+        const quizeS = await Quizes.insertMany(quizes)
         return res.status(200).json("Inserted all quizes")
+    }
+
+    if(mode === -1){
+        if(quiz_id){
+            const del = await Quizes.deleteOne({ _id : new ObjectId(quiz_id)})
+            return res.status(200).json({message : "Deleted!"})
+        }
     }
 
   } catch (e) {

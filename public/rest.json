@@ -5,7 +5,79 @@
         "quizContent": {
             "Subject": "ITEL 316 - Prelim Reviewer",
             "quizName": "ITEL 316 - Prelim Reviewer",
+            "quizType" : 1,
             "questions": [
+                {
+                    "type": 0,
+                    "question": "What datatype to store words, ex: \"Hello World!\"",
+                    "answers": ["String (string)"],
+                    "choices": ["Integer (int)", "Character (char)", "String (string)", "Double", "Boolean"]
+                },{
+                    "type": 0,
+                    "question": "What datatype to use to store this -> 14",
+                    "answers": ["Integer (int)"],
+                    "choices": ["Integer (int)", "Character (char)", "String (string)", "Double", "Boolean"]
+                },{
+                    "type": 1,
+                    "question": "Android 6.0 codename",
+                    "answers": ["Marshmallow"],
+                    "choices": []
+                },{
+                    "type": 1,
+                    "question": "Android 5.0 codename",
+                    "answers": ["Lolipop"],
+                    "choices": []
+                },{
+                    "type": 1,
+                    "question": "Android 4.4 codename",
+                    "answers": ["KitKat"],
+                    "choices": []
+                },{
+                    "type": 1,
+                    "question": "Android 4.1 codename",
+                    "answers": ["Jelly Bean"],
+                    "choices": []
+                },{
+                    "type": 1,
+                    "question": "Android 4.0 codename",
+                    "answers": ["Ice Cream Sandwich"],
+                    "choices": []
+                },{
+                    "type": 1,
+                    "question": "Android 3.0 codename",
+                    "answers": ["Honeycomb"],
+                    "choices": []
+                },{
+                    "type": 1,
+                    "question": "Android 2.3 codename",
+                    "answers": ["Gingerbread"],
+                    "choices": []
+                },{
+                    "type": 1,
+                    "question": "Android 2.2 codename",
+                    "answers": ["Froyo"],
+                    "choices": []
+                },{
+                    "type": 1,
+                    "question": "Android 2.0 codename",
+                    "answers": ["Eclair"],
+                    "choices": []
+                },{
+                    "type": 1,
+                    "question": "Android 1.6 codename",
+                    "answers": ["Donut"],
+                    "choices": []
+                },{
+                    "type": 1,
+                    "question": "GUI stands for ",
+                    "answers": ["Graphical User Interface"],
+                    "choices": []
+                },{
+                    "type": 1,
+                    "question": "What does AVD stands for?",
+                    "answers": ["Android Virtual Device"],
+                    "choices": []
+                },
                 {
                     "type": 0,
                     "question": "API level of android 6.0",
@@ -347,7 +419,7 @@
                 {
                     "type": 0,
                     "question": "Android was developed by ______ led by Google, and other companies",
-                    "answers": [],
+                    "answers": ["Open Handset Alliance"],
                     "choices": [
                         "Microsoft",
                         "Open Source Community",
