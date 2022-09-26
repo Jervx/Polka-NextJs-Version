@@ -7,6 +7,8 @@ import Layout from "../layout";
 import QuizContainer from "../components/quiz/QuizContainer";
 import Loading from "../components/loading";
 
+import Character from "../components/Character";
+
 export default function Quiz() {
   const router = useRouter();
   const [qid, setQid] = useState("");
@@ -17,6 +19,9 @@ export default function Quiz() {
 
   const [pntr, setPntr] = useState(0);
   const [finished, setFinished] = useState(false)
+  const [mouseX, setMouseX] = useState(0)
+  const [mouseY, setMouseY] = useState(0)
+
 
   useEffect(() => {
     const { _qid } = router.query;
@@ -99,7 +104,7 @@ export default function Quiz() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex justify-center mt-20 md:mt-24 min-h-screen relative">
+      <main onMouseMove={(e)=>{ setMouseX(e.clientX); setMouseY(e.clientY) }} className="flex justify-center mt-20 md:mt-24 min-h-screen relative">
         <Loading loading={loading} />
 
         {questions.length > 0 && !loading && (
@@ -131,9 +136,8 @@ export default function Quiz() {
         )}
 
         {
-            finished && 
-          <img className="absolute bottom-0 left-0 w-40 md:w-96" src="https://c.tenor.com/qGJ0OTouREEAAAAi/anya-spy-x-family-anime.gif" />
-
+            finished || true && 
+            <Character  mouseX={mouseX} mouseY={mouseY}/>
         }
       </main>
     </>

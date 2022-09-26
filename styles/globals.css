@@ -36,3 +36,13 @@ body {
 .font-andika{
     font-family: 'Andika', sans-serif;
 }
+
+.eye-right{
+        top: 188px;
+        right: 135px;
+}
+
+.eye-left{
+    top: 188px;
+    right: 285px;
+}
