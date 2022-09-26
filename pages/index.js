@@ -114,7 +114,7 @@ export default function Home() {
                         <p className="text-sm font-bold ">
                           {q.quizType === 0 ? "multiple choice" : ""}{" "}
                           {q.quizType === 1 ? "Identification" : ""}{" "}
-                          {q.quizType === 3 ? "Mixed" : ""}
+                          {q.quizType === 2 ? "Mixed" : ""}
                         </p>
                         <RiCheckboxMultipleFill className="ml-2 text-sm" />
                       </div>
