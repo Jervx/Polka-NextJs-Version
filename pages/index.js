@@ -119,7 +119,7 @@ export default function Home() {
                         </p>
                         <div className="avatar ">
                           <div className="w-5 rounded-full">
-                            <img src="https://img1.ak.crunchyroll.com/i/spire2/f502d225e63d2dcf6ea9810c37048f971651090640_large.jpg" />
+                            <img alt="creator profile" src="https://img1.ak.crunchyroll.com/i/spire2/f502d225e63d2dcf6ea9810c37048f971651090640_large.jpg" />
                           </div>
                         </div>
                       </div>
