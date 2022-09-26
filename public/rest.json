@@ -669,18 +669,6 @@
                 },
                 {
                     "type": 0,
-                    "question": "What type of maintenance? Changing a system so that it operates in a different environment (computer, OS, etc.) from its initial implementation",
-                    "answers": [
-                        "Maintenance to add to or modify the system’s functionality"
-                    ],
-                    "choices": [
-                        "Maintenance to repair software faults",
-                        "Maintenance to adapt software to a different operating environment",
-                        "Maintenance to add to or modify the system’s functionality"
-                    ]
-                },
-                {
-                    "type": 0,
                     "question": "Maintinance Examples are : Y2k, Anti-Virus Software, Operating system patching, Commercial Software in General",
                     "answers": [
                         "True"
@@ -1243,8 +1231,8 @@
             "answeredBy": []
     },
     {
-            "Subject": "SADM - Prelim Reviewer",
-            "quizName": "SADM - Prelim Reviewer",
+            "Subject": "PHED - Prelim Reviewer",
+            "quizName": "PHED - Prelim Reviewer",
             "questions": [
                 {
                     "type": 0,

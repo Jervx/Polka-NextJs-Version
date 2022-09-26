@@ -99,9 +99,30 @@ export default function Quiz() {
   return (
     <>
       <Head>
-        <title>Quiz</title>
-        <meta name="description" content={`Poka - ${quizTitle}`} />
+        <title>Polka Quiz</title>
+        <meta name="description" content="Try and answer these reviewer" />
         <link rel="icon" href="/PolkaQuiz.ico" />
+
+        <title>Polka Quiz</title>
+        <link rel="icon" href="/PolkaQuiz.ico" />
+        <meta name="description" content="A very simple quiz app site for students" />
+        <meta name="description" content="A very simple quiz app site for students" />
+
+        <meta itemprop="name" content="Polka Quiz"/>
+        <meta itemprop="description" content="A very simple quiz app site for students"/>
+        <meta itemprop="image" content="/metacover.png"/>
+        <meta name="google-site-verification" content="BMsOphT0waH2PjmDohyreInesLvtdqjT7l2NKibBZfA" />
+
+        <meta property="og:url" content="https://polka-quiz.vercel.app"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Polka Quiz"/>
+        <meta property="og:description" content="A very simple quiz app site for students"/>
+        <meta property="og:image" content="/metacover.png"/>
+
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="Polka Quiz"/>
+        <meta name="twitter:description" content="A very simple quiz app site for students"/>
+        <meta name="twitter:image" content="/metacover.png"/>
       </Head>
 
       <main onMouseMove={(e)=>{ setMouseX(e.clientX); setMouseY(e.clientY) }} className="flex justify-center mt-20 md:mt-24 min-h-screen relative">
