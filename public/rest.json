@@ -603,11 +603,11 @@
                 "type": 0,
                 "question": "What programming language is used in android?",
                 "answers": [
-                    "Java"
+                    "Java", "Kotlin"
                 ],
                 "choices": [
                     "Cobol",
-                    "C",
+                    "Kotlin",
                     "Java",
                     "Rust"
                 ]

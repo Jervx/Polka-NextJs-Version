@@ -44,7 +44,7 @@ const ThemeSelector = () => {
   };
 
   return (
-    <div className="tooltip tooltip-bottom" data-tip="Random Theme">
+    <div className="tooltip tooltip-bottom" data-tip={`${!selected? '-' : selected.name}`}>
     <button onClick={() => changeTheme()} className="btn btn-square btn-ghost">
       {selected && selected.type === "dark" ? (
         <MdDarkMode className="text-2xl" />
