@@ -106,14 +106,7 @@ export default function Quiz() {
 
           <title>Polka Quiz</title>
           <link rel="icon" href="/PolkaQuiz.ico" />
-          <meta
-            name="description"
-            content="A very simple quiz app site for students"
-          />
-          <meta
-            name="description"
-            content="A very simple quiz app site for students"
-          />
+          <meta name="description" content={`Try and answer reviewer - ${quizTitle}`} />
 
           <meta itemProp="name" content="Polka Quiz" />
           <meta
@@ -131,7 +124,7 @@ export default function Quiz() {
           <meta property="og:title" content="Polka Quiz" />
           <meta
             property="og:description"
-            content="A very simple quiz app site for students"
+            content={`Try and answer reviewer - ${quizTitle}`}
           />
           <meta property="og:image" content="/metacover.png" />
 
@@ -139,7 +132,7 @@ export default function Quiz() {
           <meta name="twitter:title" content="Polka Quiz" />
           <meta
             name="twitter:description"
-            content="A very simple quiz app site for students"
+            content={`Try and answer reviewer - ${quizTitle}`}
           />
           <meta name="twitter:image" content="/metacover.png" />
         </Head>
