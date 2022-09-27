@@ -71,7 +71,7 @@ export default function Home() {
             <MdPublic className="text-primary text-lg" />
             <p className="hidden md:block">Shared</p>
           </div>
-          <div onClick={()=> router.push('/?tab=1')} className={`flex duration-150 ease-out text-sm md:gap-2 items-center md:p-3 hover:bg-base-200 mt-1 ${tab === 1? 'bg-base-200 font-black' : ''}`}>
+          <div onClick={()=> router.push('/?tab=1')} className={`flex duration-150 ease-out text-sm md:gap-2 items-center md:p-3 hover:bg-base-200 mt-1 cursor-pointer rounded-md ${tab === 1? 'bg-base-200 font-black' : ''}`}>
             <FaPenNib className="text-primary text-lg" />
             <p className="hidden md:block">Yours </p>
           </div>
