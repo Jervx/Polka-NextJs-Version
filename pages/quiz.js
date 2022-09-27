@@ -111,7 +111,7 @@ export default function Quiz() {
           <meta itemProp="name" content="Polka Quiz" />
           <meta
             itemProp="description"
-            content="A very simple quiz app site for students"
+            content={`Try and answer reviewer - ${quizTitle}`}
           />
           <meta itemProp="image" content="/metacover.png" />
           <meta
