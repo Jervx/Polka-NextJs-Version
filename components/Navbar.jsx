@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="hidden md:block form-control">
           <input
             type="text"
-            placeholder="Comming soon..."
+            placeholder="Coming soon..."
             className="input input-sm input-bordered ring-2 ring-base-100 duration-150 focus:ring-accent hover:ring-accent"
           />
         </div>
