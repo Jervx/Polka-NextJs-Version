@@ -3,8 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env : {
-    CLID : process.env.CLID,
-    MONGOURI : process.env.MONGOURI
+    CLID : process.env.GOOGLE_CLIENT_ID,
+    GSEC : process.env.GOOGLE_CLIENT_SECRET,
+    MONGOURI : process.env.MONGOURI,
   }
 }
 

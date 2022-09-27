@@ -1,6 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import mongoConnect from "../../services/mongoDb";
 import Quizes from "../../models/Quiz";
+import Users from "../../models/User";
 
 let ObjectId = require("mongoose").Types.ObjectId;
 
@@ -8,7 +9,7 @@ mongoConnect();
 
 export default async function handler(req, res) {
   
-  const { mode, quiz_id, quiz_name, quizContent, quizes } = req.body;
+  const { mode, quiz_id, quiz_name, quizContent, quizes, uid } = req.body;
 
 
   try {
@@ -46,7 +47,14 @@ export default async function handler(req, res) {
 
     // all
     if (mode === 3){
-        const quizes = await Quizes.find({}).sort({cat : -1});
+        const quizesQuery = await Quizes.find({}).sort({cat : -1});
+        let quizes = []
+
+        for(var x = 0; x < quizesQuery.length; x++){
+            const authorInfo = await Users.findOne({ _id : new ObjectId(quizesQuery[x].toObject().author) }, { _id : 1, name : 1, picture : 1 })
+            quizes.push({...quizesQuery[x].toObject(), authorInfo})
+        }
+
         return res.status(200).json(quizes)
     }
 
@@ -54,6 +62,12 @@ export default async function handler(req, res) {
     if(mode === 4){
         const quizeS = await Quizes.insertMany(quizes)
         return res.status(200).json("Inserted all quizes")
+    }
+
+    // select by user
+    if(mode === 5){
+        const myQuizes = await Quizes.find({ author : new ObjectId(uid) })
+        return res.status(200).json(myQuizes)
     }
 
     // delete one

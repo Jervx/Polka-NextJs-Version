@@ -1,4 +1,4 @@
-import { Schema, model, models } from 'mongoose';
+import { Schema, model, models, Mongoose } from 'mongoose';
 
 const QuizSchema = new Schema({
   Subject: {type : String, default : ""},
@@ -7,7 +7,8 @@ const QuizSchema = new Schema({
   questions : { type : Array, default : [] },
   answeredBy : { type : Array, default : []},
   cat : { type : Date, default : Date.now },
-  accessCount : { type : Number, default : 0 }
+  accessCount : { type : Number, default : 0 },
+  author : { type : Schema.Types.ObjectId, required : true }
 });
 
 const Quiz = models.Quiz || model('Quiz', QuizSchema);
