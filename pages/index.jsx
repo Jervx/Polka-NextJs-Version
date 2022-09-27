@@ -12,7 +12,7 @@ import Yours from "../components/Yours";
 
 export default function Home() {
   const router = useRouter();
-  const [tab, setTab] = useState(-1);
+  const [tab, setTab] = useState(0);
 
   useEffect(() => {
     const { tab } = router.query;
