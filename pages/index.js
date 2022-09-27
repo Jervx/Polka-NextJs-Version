@@ -111,7 +111,7 @@ export default function Home() {
               quizes.map((q, idx) => (
                 <div key={idx} className="p-0 md:p-2 mx-1 mt-8 md:mx-4">
                   <div
-                    onClick={() => router.push(`/quiz?_qid=${q._id}`)}
+                    onClick={() => router.push(`/quiz?_qid=${q._id}&qtitle=${q.quizName}`)}
                     className="rounded-md outline outline-1 outline-base-300/70 p-4 hover:cursor-pointer duration-150 ease-in shadow-sm hover:shadow-lg hover:scale-105 "
                   >
                     <div className="md:flex justify-between items-center">

@@ -18,34 +18,34 @@ export default function Quiz() {
   const [loading, setLoading] = useState(false);
 
   const [pntr, setPntr] = useState(0);
-  const [finished, setFinished] = useState(false)
-  const [mouseX, setMouseX] = useState(0)
-  const [mouseY, setMouseY] = useState(0)
-
+  const [finished, setFinished] = useState(false);
+  const [mouseX, setMouseX] = useState(0);
+  const [mouseY, setMouseY] = useState(0);
 
   useEffect(() => {
-    const { _qid } = router.query;
+    const { _qid, _qtitle } = router.query;
     if (!_qid) return;
     if (!router.isReady) return;
     setQid(_qid);
+    setQuizTitle(_qtitle)
   }, [router]);
 
   const shuffle = () => {
     let genQuestions = genArray(questions.length);
 
-    for (var x = 0; x < genQuestions.length; x++){
+    for (var x = 0; x < genQuestions.length; x++) {
       var QSTN = questions[genQuestions[x]];
-      var genChoices = genArray(QSTN.choices.length)
+      var genChoices = genArray(QSTN.choices.length);
 
-      for(var y = 0; y < genChoices.length; y++)
-          genChoices[y] = QSTN.choices[genChoices[y]]
+      for (var y = 0; y < genChoices.length; y++)
+        genChoices[y] = QSTN.choices[genChoices[y]];
 
-      QSTN = {...QSTN, choices : genChoices}
-      genQuestions[x] = QSTN
+      QSTN = { ...QSTN, choices: genChoices };
+      genQuestions[x] = QSTN;
     }
 
     setQuestions(genQuestions);
-  }
+  };
 
   const loadQuiz = async () => {
     if (qid.length === 0) return;
@@ -74,15 +74,15 @@ export default function Quiz() {
       // Shuffle
       let genQuestions = genArray(data.questions.length);
 
-      for (var x = 0; x < genQuestions.length; x++){
+      for (var x = 0; x < genQuestions.length; x++) {
         var QSTN = data.questions[genQuestions[x]];
-        var genChoices = genArray(QSTN.choices.length)
+        var genChoices = genArray(QSTN.choices.length);
 
-        for(var y = 0; y < genChoices.length; y++)
-            genChoices[y] = QSTN.choices[genChoices[y]]
+        for (var y = 0; y < genChoices.length; y++)
+          genChoices[y] = QSTN.choices[genChoices[y]];
 
-        QSTN = {...QSTN, choices : genChoices}
-        genQuestions[x] = QSTN
+        QSTN = { ...QSTN, choices: genChoices };
+        genQuestions[x] = QSTN;
       }
 
       setQuestions(genQuestions);
@@ -98,34 +98,60 @@ export default function Quiz() {
 
   return (
     <>
-      <Head>
-        <title>Polka Quiz</title>
-        <meta name="description" content="Try and answer these reviewer" />
-        <link rel="icon" href="/PolkaQuiz.ico" />
+      {qid.length === 0 && (
+        <Head>
+          <title>Polka Quiz</title>
+          <meta name="description" content={`Try and answer reviewer - ${quizTitle}`} />
+          <link rel="icon" href="/PolkaQuiz.ico" />
 
-        <title>Polka Quiz</title>
-        <link rel="icon" href="/PolkaQuiz.ico" />
-        <meta name="description" content="A very simple quiz app site for students" />
-        <meta name="description" content="A very simple quiz app site for students" />
+          <title>Polka Quiz</title>
+          <link rel="icon" href="/PolkaQuiz.ico" />
+          <meta
+            name="description"
+            content="A very simple quiz app site for students"
+          />
+          <meta
+            name="description"
+            content="A very simple quiz app site for students"
+          />
 
-        <meta itemProp="name" content="Polka Quiz"/>
-        <meta itemProp="description" content="A very simple quiz app site for students"/>
-        <meta itemProp="image" content="/metacover.png"/>
-        <meta name="google-site-verification" content="BMsOphT0waH2PjmDohyreInesLvtdqjT7l2NKibBZfA" />
+          <meta itemProp="name" content="Polka Quiz" />
+          <meta
+            itemProp="description"
+            content="A very simple quiz app site for students"
+          />
+          <meta itemProp="image" content="/metacover.png" />
+          <meta
+            name="google-site-verification"
+            content="BMsOphT0waH2PjmDohyreInesLvtdqjT7l2NKibBZfA"
+          />
 
-        <meta property="og:url" content="https://polka-quiz.vercel.app"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Polka Quiz"/>
-        <meta property="og:description" content="A very simple quiz app site for students"/>
-        <meta property="og:image" content="/metacover.png"/>
+          <meta property="og:url" content="https://polka-quiz.vercel.app" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Polka Quiz" />
+          <meta
+            property="og:description"
+            content="A very simple quiz app site for students"
+          />
+          <meta property="og:image" content="/metacover.png" />
 
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:title" content="Polka Quiz"/>
-        <meta name="twitter:description" content="A very simple quiz app site for students"/>
-        <meta name="twitter:image" content="/metacover.png"/>
-      </Head>
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Polka Quiz" />
+          <meta
+            name="twitter:description"
+            content="A very simple quiz app site for students"
+          />
+          <meta name="twitter:image" content="/metacover.png" />
+        </Head>
+      )}
 
-      <main onMouseMove={(e)=>{ setMouseX(e.clientX); setMouseY(e.clientY) }} className="flex justify-center mt-20 md:mt-24 min-h-screen relative">
+      <main
+        onMouseMove={(e) => {
+          setMouseX(e.clientX);
+          setMouseY(e.clientY);
+        }}
+        className="flex justify-center mt-20 md:mt-24 min-h-screen relative"
+      >
         <Loading loading={loading} />
 
         {questions.length > 0 && !loading && (
@@ -135,9 +161,11 @@ export default function Quiz() {
               shuffle();
               setScore(0);
               setPntr(0);
-              setFinished(false)
+              setFinished(false);
             }}
-            onFinish={() => { setFinished(true) }}
+            onFinish={() => {
+              setFinished(true);
+            }}
             onCorrect={(val) => {
               if (val) setScore(score + 1);
             }}
@@ -152,14 +180,15 @@ export default function Quiz() {
         {!loading && questions.length === 0 && (
           <div>
             <p className="text-center">No Question In This Quiz</p>
-            <img alt="anya sad" className="absolute bottom-0 left-0 w-40" src="https://c.tenor.com/qGJ0OTouREEAAAAi/anya-spy-x-family-anime.gif" />
+            <img
+              alt="anya sad"
+              className="absolute bottom-0 left-0 w-40"
+              src="https://c.tenor.com/qGJ0OTouREEAAAAi/anya-spy-x-family-anime.gif"
+            />
           </div>
         )}
 
-        {
-            finished && 
-            <Character  mouseX={mouseX} mouseY={mouseY}/>
-        }
+        {finished && <Character mouseX={mouseX} mouseY={mouseY} />}
       </main>
     </>
   );
