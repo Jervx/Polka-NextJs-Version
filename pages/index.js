@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
+import ReactMarkdown from "react-markdown"
 
 import { BsFillJournalBookmarkFill } from "react-icons/bs";
 import { RiCheckboxMultipleFill } from "react-icons/ri";
@@ -75,7 +76,8 @@ export default function Home() {
       <main
         onClick={() => {}}
         className="m-5 font-andika text-2xl mt-20 sm:mt-24 flex gap-2 relative min-h-screen"
-      >
+      >  
+
         <div className="fixed h-screen  hidden md:block w-1/12 md:w-2/12">
           <div className="flex text-sm md:gap-2 items-center py-4 md:p-4 bg-base-200 hover:bg-base-200 cursor-pointer">
             <MdPublic className="text-accent " />
@@ -96,6 +98,8 @@ export default function Home() {
           <div className="flex justify-center mt-4">
             <BsFillJournalBookmarkFill className="text-2xl text-accent" />
           </div>
+          <div className="my-16">
+      </div>
           <p className="text-center mt-2 text-sm font-bold">Reviewers</p>
           <p className="text-center justify-center text-sm opacity-75 mt-2">
             These are reviewers/questions that are created & shared <br /> by

@@ -4,45 +4,204 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100;300;400;500;600;700;900&family=Lato:ital,wght@0,400;0,900;1,300&display=swap');
 
-html{
+html {
     @apply bg-base-100 duration-200 ease-in-out;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-::-webkit-scrollbar{
-    @apply bg-base-100/50 w-3;
+::-webkit-scrollbar {
+    @apply bg-base-100/25 w-3;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     @apply bg-base-300 rounded-2xl;
 }
 
-.font-inter{
+::-webkit-scrollbar-corner {
+    @apply bg-base-100/25
+}
+
+.font-inter {
     font-family: 'Inter', sans-serif;
 }
 
-.font-lato{
+.font-lato {
     font-family: 'Lato', sans-serif;
 }
 
-.font-andika{
+.font-andika {
     font-family: 'Andika', sans-serif;
 }
 
-.eye-right{
-        top: 188px;
-        right: 135px;
+.eye-right {
+    top: 188px;
+    right: 135px;
 }
 
-.eye-left{
+.eye-left {
     top: 188px;
     right: 285px;
 }
+
+
+/* CODE HIGLIGHT */
+
+.codeLang {
+    @apply text-neutral-content;
+    text-shadow:
+        0 0 7px rgb(217, 38, 169),
+        0 0 10px rgb(217, 38, 169),
+        0 0 21px rgb(217, 38, 169),
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px rgb(217, 38, 169),
+        0 0 102px #0fa,
+        0 0 151px rgb(217, 38, 169);
+  }
+  
+  .codeLang {
+    animation: flicker 1.5s infinite alternate;     
+  }
+  
+  /* Flickering animation */
+  @keyframes flicker {
+      
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 15px rgb(201, 123, 180),
+        0 0 20px rgb(217, 38, 169),
+        0 0 25px rgb(217, 38, 169),
+        0 0 30px rgb(217, 38, 169),
+        0 0 35px rgb(226, 155, 207),
+        0 0 40px rgb(194, 77, 163),
+        0 0 45px rgb(217, 38, 169);
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+
+
+pre code.hljs {
+    display: block;
+    overflow-x: visible;
+    padding: 1em
+}
+
+code.hljs {
+    padding: 3px 5px
+}
+
+/*!
+  Theme: GitHub Dark Dimmed
+  Description: Dark dimmed theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Colors taken from GitHub's CSS
+*/
+.hljs {
+    @apply text-neutral-content;
+    text-shadow: 3px 0px 6px rgba(0,0,0,0.2),
+    0px 0px 2px rgba(255,255,255,0.1);
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+    
+}
+
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+    @apply text-info
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-variable {
+    @apply text-neutral-content
+}
+
+.hljs-meta .hljs-string,
+.hljs-regexp,
+.hljs-string {
+    @apply text-warning
+}
+
+.hljs-built_in,
+.hljs-symbol {
+    @apply text-accent
+}
+
+.hljs-code,
+.hljs-comment,
+.hljs-formula {
+    color: #768390
+}
+
+.hljs-name,
+.hljs-quote,
+.hljs-selector-pseudo,
+.hljs-selector-tag {
+    @apply text-neutral-content
+}
+
+.hljs-subst {
+    /* color: #adbac7 */
+}
+
+.hljs-section {
+    color: #316dca;
+    font-weight: 700
+}
+
+.hljs-bullet {
+    color: blue
+}
+
+.hljs-emphasis {
+    color: #adbac7;
+    font-style: italic
+}
+
+.hljs-strong {
+    color: #adbac7;
+    font-weight: 700
+}
+/* 
+.hljs-addition {
+    color: #b4f1b4;
+    background-color: #1b4721
+}
+
+.hljs-deletion {
+    color: #ffd8d3;
+    background-color: #78191b
+} */

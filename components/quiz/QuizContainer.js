@@ -1,8 +1,12 @@
+import hljs from 'highlight.js'
+
 import { BsFillJournalBookmarkFill } from "react-icons/bs";
 import { AiFillLike } from "react-icons/ai";
 import { TiArrowRightThick } from "react-icons/ti";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { checkMyAnswer } from "../../helpers";
+
+
 const QuizContainer = ({
   title,
   pntr,
@@ -20,6 +24,7 @@ const QuizContainer = ({
   const [checked, setChecked] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [finished, setFinished] = useState(false);
+
 
   const getRing = (idx) => {
     if (checked)
@@ -54,7 +59,15 @@ const QuizContainer = ({
       onCorrect(true);
     } else soundWrong.play();
     setChecked(true);
-  }
+  };
+
+  useEffect(()=>{
+    if(!question.isCode) return;
+
+    document.querySelectorAll(".codeblock").forEach(block => {
+        hljs.highlightAll(question.question, { language : question.lang })
+      });
+  },[pntr])
 
   return (
     <div className="w-full sm:w-full md:w-9/12 lg:w-7/12 rounded-lg  px-8 md:px-24 relative">
@@ -68,7 +81,11 @@ const QuizContainer = ({
         <>
           <p className="text-center w-full mt-16 text-xl">You&apos;ve got</p>
           <div className="flex justify-center mt-4 mb-16">
-            <p className={`text-4xl ${ myScore / total * 100 > 75 ? 'text-success' : 'text-warning' }`}>
+            <p
+              className={`text-4xl ${
+                (myScore / total) * 100 > 75 ? "text-success" : "text-warning"
+              }`}
+            >
               {myScore} : {total}
             </p>
           </div>
@@ -91,13 +108,17 @@ const QuizContainer = ({
           </div>
           <div className="my-4">
             {question.isCode ? (
-              <div className="mockup-code">
-                {question.question.split("\n").map((code, i) => (
-                  <pre data-prefix={i + 1} key={i + 1}>
-                    <code>{code}</code>
-                  </pre>
-                ))}
-              </div>
+              //   <div className="mockup-code">
+              //     {question.question.split("\n").map((code, i) => (
+              //       <pre data-prefix={i + 1} key={i + 1}>
+              //         <code>{code}</code>
+              //       </pre>
+              //     ))}
+              //   </div>
+              <pre className="overflow-scroll codeblock md:w-full h-96 mockup-code">
+                <p className='mr-5 font-mono absolute left-28 top-4 codeLang'>{question.lang}</p>
+                <code className={`language-${question.lang}`} >{question.question}</code>
+              </pre>
             ) : (
               <p className="mt-4 font-lato font-bold text-xl md:text-2xl">
                 {question.question}
@@ -113,7 +134,7 @@ const QuizContainer = ({
                         idx
                       )} ring-2 p-4 px-4 mb-5 rounded-xl`}
                     >
-                      <span className="font-lato tracking-wider text-lg md:text-xl font-bold flex">
+                      <span className="w-9/12 max-h-40 text-justify break-all font-lato tracking-wider text-lg md:text-xl font-bold flex">
                         {choice}{" "}
                         {checkMyAnswer(
                           question.type === 1
@@ -152,11 +173,11 @@ const QuizContainer = ({
                       if (checked) return;
                       setAnswer(e.target.value);
                     }}
-                    onKeyDown={(e)=>{
-                        if (e.key === "Enter") {
-                            e.preventDefault();
-                            if(!checked) verifyAnswer()
-                        }
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        if (!checked) verifyAnswer();
+                      }
                     }}
                     value={answer}
                     placeholder="Your answer here"

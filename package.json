@@ -10,15 +10,18 @@
   },
   "dependencies": {
     "daisyui": "^2.29.0",
+    "highlight.js": "^11.6.0",
     "mongoose": "^6.6.1",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-google-one-tap-login": "^0.1.1",
     "react-icons": "^4.4.0",
+    "react-markdown": "^8.0.3",
     "react-toastify": "^9.0.8"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.8",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",
