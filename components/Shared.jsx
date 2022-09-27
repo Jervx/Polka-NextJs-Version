@@ -2,8 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-import ReactMarkdown from "react-markdown";
-
 import { BsFillJournalBookmarkFill } from "react-icons/bs";
 import { RiCheckboxMultipleFill } from "react-icons/ri";
 import { BiGridVertical } from "react-icons/bi";
@@ -70,17 +68,17 @@ const Shared = () => {
                 }
                 className="rounded-md outline outline-1 outline-base-300/70 p-4 hover:cursor-pointer duration-150 ease-in shadow-sm hover:shadow-lg hover:scale-105 "
               >
-                <div className="md:flex justify-between items-center">
+                <div className="md:flex justify-between items-center drop-shadow-md">
                   {
                     q.authorInfo ? (
                         <div className="flex justify-start items-center gap-2">
                     <BiGridVertical className="text-sm" />
                     <p className="text-sm">
-                      <span className="font-bold opacity-50">Creator</span>
+                      <span className="font-bold opacity-50">Author</span>
                       {` : ${q.authorInfo.name}`}
                     </p>
                     <div className="avatar ">
-                      <div className="w-5 rounded-full">
+                      <div className="w-8 rounded-full">
                         <img
                           alt="creator profile"
                           src={q.authorInfo.picture}
@@ -92,11 +90,11 @@ const Shared = () => {
                         <div className="flex justify-start items-center gap-2">
                     <BiGridVertical className="text-sm" />
                     <p className="text-sm">
-                      <span className="font-bold opacity-50 mr-2">Creator</span> : &nbsp; 
+                      <span className="font-bold opacity-50 mr-2">Author</span> : &nbsp; 
                       Anya
                     </p>
                     <div className="avatar ">
-                      <div className="w-5 rounded-full">
+                      <div className="w-8 rounded-full">
                         <img
                           alt="creator profile"
                           src="https://img1.ak.crunchyroll.com/i/spire2/f502d225e63d2dcf6ea9810c37048f971651090640_large.jpg"

@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useSession, signIn, signOut } from "next-auth/react";
@@ -76,12 +77,12 @@ const Shared = () => {
                           <BiGridVertical className="text-sm" />
                           <p className="text-sm">
                             <span className="font-bold opacity-50">
-                              Creator
+                              Author
                             </span>{" "}
                             : You
                           </p>
                           <div className="avatar ">
-                            <div className="w-5 rounded-full">
+                            <div className="w-8 drop-shadow-md rounded-full">
                               <img
                                 alt="creator profile"
                                 src={session.user.image}
@@ -129,7 +130,7 @@ const Shared = () => {
       ) : (
         <>
           <p className="text-center text-2xl font-inter font-black">
-            Oops! you're not signed in.
+            Oops! you&apos;re not signed in.
           </p>
           <div className="w-full flex justify-center mt-4">
             <img
