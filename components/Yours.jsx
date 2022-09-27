@@ -128,7 +128,7 @@ const Shared = () => {
           </div>
         </>
       ) : (
-        <>
+        <div className="w-full md:w-9/12 relative">
           <p className="text-center text-2xl font-inter font-black">
             Oops! you&apos;re not signed in.
           </p>
@@ -139,7 +139,7 @@ const Shared = () => {
               src="https://i.kym-cdn.com/photos/images/facebook/002/388/679/0c2.png"
             />
           </div>
-        </>
+        </div>
       )}
     </>
   );
