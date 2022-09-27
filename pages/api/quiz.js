@@ -47,7 +47,7 @@ export default async function handler(req, res) {
 
     // all
     if (mode === 3){
-        const quizesQuery = await Quizes.find({}).sort({cat : -1});
+        const quizesQuery = await Quizes.find({ state : 0 }).sort({cat : -1});
         let quizes = []
 
         for(var x = 0; x < quizesQuery.length; x++){

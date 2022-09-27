@@ -49,7 +49,7 @@ const Shared = () => {
         <Loading loading={loading} />
       </div>
       <div className="flex justify-center mt-4">
-        <BsFillJournalBookmarkFill className="text-2xl text-accent" />
+        <BsFillJournalBookmarkFill className="text-2xl text-primary" />
       </div>
       <div className="my-4"></div>
       <p className="text-center mt-2 text-sm font-bold">Reviewers</p>

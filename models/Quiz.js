@@ -8,7 +8,8 @@ const QuizSchema = new Schema({
   answeredBy : { type : Array, default : []},
   cat : { type : Date, default : Date.now },
   accessCount : { type : Number, default : 0 },
-  author : { type : Schema.Types.ObjectId, required : true }
+  author : { type : Schema.Types.ObjectId, required : true },
+  state : { type : Number, default : 1 } // 0 - public, 1 - private, -1 archived
 });
 
 const Quiz = models.Quiz || model('Quiz', QuizSchema);

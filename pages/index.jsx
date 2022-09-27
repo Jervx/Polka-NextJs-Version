@@ -67,12 +67,12 @@ export default function Home() {
       <main className="m-5 font-andika text-2xl mt-20 sm:mt-24 flex gap-2 relative min-h-screen">
         <div className="sticky hidden md:block w-1/12 md:w-2/12"></div>
         <div className="fixed h-screen  hidden md:block w-1/12 md:w-2/12">
-          <div onClick={()=> router.push('/?tab=0')} className={`flex duration-150 ease-out text-sm md:gap-2 items-center py-4 md:p-4 hover:bg-base-200 cursor-pointer ${tab === 0? 'bg-base-200' : ''}`}>
-            <MdPublic className="text-accent " />
+          <div onClick={()=> router.push('/?tab=0')} className={`flex duration-150 ease-out text-sm md:gap-2 items-center md:p-3 hover:bg-base-200 mt-1 cursor-pointer rounded-md ${tab === 0? 'bg-base-200 font-black' : ''}`}>
+            <MdPublic className="text-primary text-lg" />
             <p className="hidden md:block">Shared</p>
           </div>
-          <div onClick={()=> router.push('/?tab=1')} className={`flex duration-150 ease-out text-sm md:gap-2 rounded-sm items-center py-4 md:p-4 hover:bg-base-200 cursor-pointer ${tab === 1? 'bg-base-200' : ''}`}>
-            <FaPenNib className="text-accent" />
+          <div onClick={()=> router.push('/?tab=1')} className={`flex duration-150 ease-out text-sm md:gap-2 items-center md:p-3 hover:bg-base-200 mt-1 ${tab === 1? 'bg-base-200 font-black' : ''}`}>
+            <FaPenNib className="text-primary text-lg" />
             <p className="hidden md:block">Yours </p>
           </div>
         </div>

@@ -59,7 +59,7 @@ const Shared = () => {
               <Loading loading={loading} />
             </div>
             <div className="flex justify-start items-center gap-2 mx-4">
-              <FaPenNib className="text-2xl text-accent " />
+              <FaPenNib className="text-2xl text-primary" />
               <p className="text-2xl font-bold">Yours</p>
               <span className="badge ml-2 badge-md">{quizes.length}</span>
             </div>
