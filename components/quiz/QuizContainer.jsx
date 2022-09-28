@@ -70,7 +70,7 @@ const QuizContainer = ({
   },[pntr])
 
   return (
-    <div className="w-full sm:w-full md:w-9/12 lg:w-7/12 rounded-lg  px-8 md:px-24 relative">
+    <div className="w-full sm:w-full md:w-9/12 lg:w-7/12 rounded-lg  px-8 md:px-24 relative mb-8">
       <div className="flex justify-center md:my-16">
         <div className="items-center flex font-andika tracking-wide text-2xl">
           <BsFillJournalBookmarkFill className="mr-4" />
