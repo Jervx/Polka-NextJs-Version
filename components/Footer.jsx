@@ -1,6 +1,8 @@
+import { useRouter } from "next/router";
 import { AiOutlineCopyrightCircle } from "react-icons/ai";
 
 const Footer = () => {
+  const router = useRouter()
   return (
     <footer className="w-full p-4 bg-base-100 outline outline-1 outline-base-200 flex items-center justify-evenly z-20">
       <div className="flex justify-start gap-8">
