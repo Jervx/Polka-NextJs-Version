@@ -61,7 +61,7 @@ const Navbar = () => {
         <ThemeSelector />
         {session ? (
           <>
-            <div className="tooltip tooltip-bottom" data-tip={session.user.name}>
+            <div className="tooltip tooltip-left" data-tip={session.user.name}>
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 hover:scale-110 duration-200 ease-out rounded-full hover:ring-1 ">

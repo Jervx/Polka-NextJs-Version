@@ -77,7 +77,7 @@ const Shared = () => {
                       <span className="font-bold opacity-50">Author</span>
                       {` : ${q.authorInfo.name}`}
                     </p>
-                    <div className="avatar ">
+                    <div className="avatar tooltip" data-tip={q.authorInfo.name}>
                       <div className="w-8 rounded-full">
                         <img
                           alt="creator profile"
@@ -93,7 +93,7 @@ const Shared = () => {
                       <span className="font-bold opacity-50 mr-2">Author</span> : &nbsp; 
                       Anya
                     </p>
-                    <div className="avatar ">
+                    <div className="avatar tooltip" data-tip="Anya">
                       <div className="w-8 rounded-full">
                         <img
                           alt="creator profile"
