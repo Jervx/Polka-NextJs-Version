@@ -24,6 +24,7 @@ const Footer = () => {
           className="font-inter hover:font-extrabold hover:link hover:text-primary drop-shadow-md shadow-accent hover:scale-110 duration-200"
           href="https://Jervx.github.io/Polka-NextJs-Version"
           target={"_blank"}
+          rel="noreferrer"
         >
           Docs
         </a>
