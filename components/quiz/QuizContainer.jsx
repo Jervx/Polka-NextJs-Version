@@ -120,7 +120,7 @@ const QuizContainer = ({
                 <code className={`language-${question.lang}`} >{question.question}</code>
               </pre>
             ) : (
-              <p className="mt-4 font-lato font-bold text-xl md:text-2xl">
+              <p className="mt-4 font-lato font-bold text-xl md:text-2xl text-justify">
                 {question.question}
               </p>
             )}
