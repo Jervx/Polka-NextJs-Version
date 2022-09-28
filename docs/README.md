@@ -10,11 +10,11 @@ When I was grade 10, one technique that our teacher do to make his students not 
 
 I learned coding when I was senior high & until then I learned web technologies So I think It's a good idea to create a simple web app so that I can share this technique to my friends/classmates. It's my last year on college so this is my last personal project for my schoolmates. 
 
-Hope it helps them :kissing_heart:
+:kissing_heart: Hope it helps them
 
-### Features
+### Features 
 - Google OAuth (SSO)
-- Answer reviewers
+- Answer & Share reviewers
 - Simple UI
 - Wide theme options
 
@@ -24,4 +24,4 @@ Hope it helps them :kissing_heart:
 
 
 ### Contribute
-If you want to contribute, you can send me email @ *louellagracechua@gmail.com*
+If you want to contribute, you can send me email :envelope: *louellagracechua@gmail.com*

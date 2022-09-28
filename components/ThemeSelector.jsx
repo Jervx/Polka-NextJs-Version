@@ -45,11 +45,11 @@ const ThemeSelector = () => {
 
   return (
     <div className="tooltip tooltip-bottom" data-tip={`${!selected? '-' : selected.name}`}>
-    <button onClick={() => changeTheme()} className="btn btn-square btn-ghost">
+    <button onClick={() => changeTheme()} className="btn btn-square btn-ghost hover:text-primary group">
       {selected && selected.type === "dark" ? (
-        <MdDarkMode className="text-2xl" />
+        <MdDarkMode className="text-2xl group-hover:scale-125  duration-200" />
       ) : (
-        <MdLightMode className="text-2xl" />
+        <MdLightMode className="text-2xl group-hover:scale-125  duration-200" />
       )}
     </button>
     </div>
