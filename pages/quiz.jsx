@@ -71,21 +71,34 @@ export default function Quiz() {
 
       setQuizTitle(data.quizName);
 
+      let genQuestions = []
       // Shuffle
-      let genQuestions = genArray(data.questions.length);
+    //   let genQuestions = genArray(data.questions.length);
 
-      for (var x = 0; x < genQuestions.length; x++) {
-        var QSTN = data.questions[genQuestions[x]];
-        var genChoices = genArray(QSTN.choices.length);
+    //   for (var x = 0; x < genQuestions.length; x++) {
+    //     var QSTN = data.questions[genQuestions[x]];
+    //     var genChoices = genArray(QSTN.choices.length);
 
-        for (var y = 0; y < genChoices.length; y++)
-          genChoices[y] = QSTN.choices[genChoices[y]];
+    //     for (var y = 0; y < genChoices.length; y++)
+    //       genChoices[y] = QSTN.choices[genChoices[y]];
 
-        QSTN = { ...QSTN, choices: genChoices };
-        genQuestions[x] = QSTN;
-      }
+    //     QSTN = { ...QSTN, choices: genChoices };
+    //     genQuestions[x] = QSTN;
+    //   }
 
-      setQuestions(genQuestions);
+    // for (var x = 0; x < data.questions.length; x++) {
+    //     var QSTN = data.questions[x];
+    //     var genChoices = genArray(QSTN.choices.length);
+
+    //     for (var y = 0; y < genChoices.length; y++)
+    //       genChoices[y] = QSTN.choices[genChoices[y]];
+
+    //     QSTN = { ...QSTN, choices: genChoices };
+    //     genQuestions.push(QSTN);
+    //   }
+
+    //   setQuestions(genQuestions);
+      setQuestions(data.questions);
     } catch (e) {
       console.log(e);
     }
