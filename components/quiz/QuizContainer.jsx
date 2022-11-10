@@ -177,6 +177,23 @@ const QuizContainer = ({
                       if (e.key === "Enter") {
                         e.preventDefault();
                         if (!checked) verifyAnswer();
+                        else {
+                            if (pntr + 1 === total) {
+                                onFinish();
+                                setFinished(true);
+                                setAnswer("");
+                                setIsCorrect(false);
+                                setChecked(false);
+                                var soundFinish = new Audio("/sounds/finish.mp3");
+                                soundFinish.play();
+                                return;
+                              }
+                              onNext(pntr + 1);
+                              setChecked(false);
+                              setIsCorrect(false);
+                              setAnswer("");
+                              setChosen(-1);
+                        }
                       }
                     }}
                     value={answer}

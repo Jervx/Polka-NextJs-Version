@@ -32,8 +32,8 @@ const Character = ({ mouseX, mouseY }) => {
     <div className="absolute bottom-0 left-0 w-40 hidden md:block md:w-96">
     <div className="relative">
         <img alt="anya" className="" id="characterContainer" src="/images/AnyaShell.png" />
-        <img alt="eyes right" className="absolute eye eye-right" src="/images/r.png" />
-        <img alt="eyes left" className="absolute eye eye-left" src="/images/r.png" />
+        <img alt="eyes right" className="absolute duration-100 eye eye-right" src="/images/r.png" />
+        <img alt="eyes left" className="absolute duration-100 eye eye-left" src="/images/r.png" />
     </div>
     </div>
 
